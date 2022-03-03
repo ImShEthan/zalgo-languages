@@ -3,50 +3,50 @@ module.exports = {
   desc: (
     guildData,
     message
-  ) => `__**Appuyez sur une réaction pour activer/désactiver un paramètre pour les salons temporaires.**__\n\n
-**1)** __Salon manager :__\n${
+  ) => `
+**1)** __Channel manager :__\n${
     guildData.channel
-      ? `${emojis.enabled} Activé\n<#${
+      ? `${emojis.enabled} Enabled\n<#${
           message.guild.channels.cache.get(guildData.channel)
             ? message.guild.channels.cache.get(guildData.channel).id
-            : "Introuvable"
+            : "Not found"
         }>`
-      : `${emojis.disabled} Désactivé`
+      : `${emojis.disabled} Disabled`
   }
 
-**2)** __Catégorie :__\n${
+**2)** __Category :__\n${
     guildData.category
-      ? `${emojis.enabled} Activé\n${
+      ? `${emojis.enabled} Enabled\n${
           message.guild.channels.cache.get(guildData.category)
             ? message.guild.channels.cache.get(guildData.category).name
-            : "Introuvable"
+            : "Not found"
         }`
-      : `${emojis.disabled} Désactivé`
+      : `${emojis.disabled} Disabled`
   }
 
-**3)** __Prefix du salon :__\n${
-    guildData.prefix ? guildData.prefix : "Aucun prefix"
+**3)** __Prefix of the channel :__\n${
+    guildData.prefix ? guildData.prefix : "No prefix"
   }
 
-**4)** __Permission de gérer le salon :__\n${
+**4)** __Permission to manage the channel :__\n${
     guildData.managechannel
-      ? `${emojis.enabled} Activé`
-      : `${emojis.disabled} Désactivé`
+      ? `${emojis.enabled} Enabled`
+      : `${emojis.disabled} Disabled`
   }
 
-**5)** __Permission de gérer les membres dans le salon :__\n${
+**5)** __Permission to manage members in the channel :__\n${
     guildData.managemembers
-      ? `${emojis.enabled} Activé`
-      : `${emojis.disabled} Désactivé`
+      ? `${emojis.enabled} Enabled`
+      : `${emojis.disabled} Disabled`
   }
           
-__Limite par défaut :__ **${
+__Default limit :__ **${
     guildData.limitusers
-  }**\n*Faites ⬆️ pour augmenter le nombre de place par défaut.*\n*Faites ⬇️ pour diminuer le nombre de place par défaut.*
+  }**\n*Make ⬆️ to increase the default number of places.\nMake ⬇️ to decrease the default number of places.*
 `,
 
   error1: () =>
-    `${emojis.error} | Vous devez avoir une catégorie ou mettre les salons temporaires !`,
+    `${emojis.error} | You must have a category where to set the temporary channels!`,
 
-  prefix: () => `Envoyez le prefix pour les salons temporaires !`,
+  prefix: () => `Send the prefix for temporary channels!`,
 };
