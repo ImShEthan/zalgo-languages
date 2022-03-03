@@ -4,7 +4,7 @@ module.exports = {
 
   selectMenu: {
     title: () => `Show more details`,
-    firstOption: () => `Show statuses`,
+    firstOption: () => `Show status`,
     secondOption: () => `Show certified bots`,
     thirdOption: () => `Show whitelist members and owners`,
   },
