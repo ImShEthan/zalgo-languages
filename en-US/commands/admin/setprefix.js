@@ -1,5 +1,5 @@
 const { emojis } = require("../../../../config");
 module.exports = {
-  missing: () => `${emojis.error} | Vous devez écrire un préfixe !`,
-  success: () => `${emojis.success} | Le préfixe du serveur a été mis à jour !`,
+  missing: () => `${emojis.error} | You must write a prefix!`,
+  success: () => `${emojis.success} | The server prefix has been updated!`,
 };
