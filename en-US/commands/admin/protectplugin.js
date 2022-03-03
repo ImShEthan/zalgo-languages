@@ -2,94 +2,94 @@ const { emojis } = require("../../../../config");
 module.exports = {
   // Main
   mainEmbedDescription: () => `
-**1)** Empêcher la création de salons
+**1)** Preventing the creation of channels
           
-**2)** Empêcher la suppression de salons
+**2)** Preventing the removal of channels
           
-**3)** Empêcher la création de rôles
+**3)** Preventing the creation of roles
           
-**4)** Empêcher la suppression de rôles
+**4)** Preventing the removal of roles
           
-**5)** Empêcher la possibilité de ban
+**5)** Preventing the possibility of a ban
           
-**6)** Empêcher la possibilité d'unban
+**6)** Prevent the possibility of unban
           
-**7)** Empêcher la création de webhooks
+**7)** Prevent the creation of webhooks
           
-**8)** Empêcher la possibilité de donner un rôle avec une grosse permission \n*(ex: Administrateur, gérer le serveur, donner des rôles, ect...)*
+**8)** Prevent the possibility of giving a role with a big permission \n*(ex: Administrator, Manage server, give roles, ect...)*
           
-**9)** Empêcher la modification de l'url personnalisé
+**9)** Prevent editing of the custom url
           
-**10)** Empêcher la modification d'un rôle
+**10)** Prevent editing of a role
           
-**11)** Empêcher l'ajout des bots`,
+**11)** Prevent bots from being added`,
   // Anti create channel
-  titleAntiChannel: () => "Anti création de salons :",
+  titleAntiChannel: () => "Anti channel creation :",
   descriptionAntiChannel: (guildData, message) => `
 **1)** ${
     guildData.anticreatechannel.enabled
-      ? `Le plugin est activé. ${emojis.enabled}\nDepuis le <t:${Math.round(
+      ? `The plugin is activated. ${emojis.enabled}\nSince <t:${Math.round(
           guildData.anticreatechannel.since / 1000
         )}:F>`
-      : `Le plugin est désactivé. ${emojis.disabled}`
+      : `The plugin is disabled. ${emojis.disabled}`
   }
 
-**2)** Sanction: **${guildData.anticreatechannel.sanction}**
+**2)** Punishment: **${guildData.anticreatechannel.sanction}**
 
-**3)** Au bout de combien de salons créés l'anti raid agit: **${
+**3)** After how many channels created the anti-raid work: **${
     guildData.anticreatechannel.maxaction
   }**
 
-**4)** La whitelist est prise en compte ? **${
-    guildData.anticreatechannel.whitelistcompte ? "Oui" : "Non"
+**4)** Is the whitelist included? **${
+    guildData.anticreatechannel.whitelistcompte ? "Yes" : "No"
   }**
-***(Si la whitelist n'est pas prise en compte, un membre whitelist qui créé un salon sera sanctionné.)***
+***(If the whitelist is not included, a whitelist member who creates a channel will be sanctioned.)***
 
-**5)** Reset le nombre d'actions de la personne sanctionnée: **${
-    guildData.anticreatechannel.resetactions ? "Oui" : "Non"
+**5)** Resets the number of actions of the sanctioned member: **${
+    guildData.anticreatechannel.resetactions ? "Yes" : "No"
   }**
 
-↩️ Retourner au menu principal.`,
+↩️ Return to the main menu.`,
   sendMemberChannelLimit: () =>
-    "Entrez le nombre de salons qu'un membre peux créer",
+    "Enter the number of channels a member can create",
   // Settings & general
   chooseSanction: () =>
-    "__**Veuillez choisir la sanction:**__\n\n1️⃣ Derank\n2️⃣ Kick\n3️⃣ Ban",
-  validNumber: () => "Entrez un nombre valide !",
-  above1: () => "Entrez un chiffre au dessus de 1 !",
+    "__**Please select the punishment:**__\n\n1️⃣ Derank\n2️⃣ Kick\n3️⃣ Ban",
+  validNumber: () => "Enter a valid number!",
+  above1: () => "Enter a number above 1!",
   // Anti delete channel
-  titleAntiDeleteChannel: () => "Anti suppression de salons :",
+  titleAntiDeleteChannel: () => "Anti channels removal:",
   descriptionAntiDeleteChannel: (guildData, message) => `
 **1)** ${
     guildData.antideletechannel.enabled
-      ? `Le plugin est activé. ${emojis.enabled}\nDepuis le <t:${Math.round(
+      ? `The plugin is activated. ${emojis.enabled}\nSince <t:${Math.round(
           guildData.antideletechannel.since / 1000
         )}:F>`
-      : `Le plugin est désactivé. ${emojis.disabled}`
+      : `The plugin is disabled. ${emojis.disabled}`
   }
 
-**2)** Sanction: **${guildData.antideletechannel.sanction}**
+**2)** Punishment: **${guildData.antideletechannel.sanction}**
 
-**3)** Au bout de combien de salons supprimés l'anti raid agit: **${
+**3)** After how many deleted channels does the anti raid work?: **${
     guildData.antideletechannel.maxaction
   }**
 
-**4)** La whitelist est prise en compte ? **${
-    guildData.antideletechannel.whitelistcompte ? "Oui" : "Non"
+**4)** Is the whitelist included? **${
+    guildData.antideletechannel.whitelistcompte ? "Yes" : "No"
   }**
-***(Si la whitelist n'est pas prise en compte, un membre whitelist qui supprime un salon sera sanctionné.)***
+***(If the whitelist is not included, a whitelist member who deletes a channel will be sanctioned.)***
 
-**5)** Reset le nombre d 'actions de la personne sanctionnée: **${
-    guildData.antideletechannel.resetactions ? "Oui" : "Non"
-  }**
-
-**6)** Re-créer le salon: **${
-    guildData.antideletechannel.recreatechannel ? "Oui" : "Non"
+**5)** Reset the number of actions of the sanctioned member: **${
+    guildData.antideletechannel.resetactions ? "Yes" : "No"
   }**
 
-↩️ Retourner au menu principal.`,
+**6)** Re-create the channel: **${
+    guildData.antideletechannel.recreatechannel ? "Yes" : "No"
+  }**
+
+↩️ Return to the main menu.`,
   sendMemberChannelDeleteLimit: () =>
-    "Entrez le nombre de salons qu'un membre peux supprimer",
+    "Enter the number of channels a member can delete",
   // Anti role creation
   titleAntiRoleCreation: () => "Anti création de rôles :",
   descriptionAntiRoleCreation: (guildData, message) => `
