@@ -91,292 +91,292 @@ module.exports = {
   sendMemberChannelDeleteLimit: () =>
     "Enter the number of channels a member can delete",
   // Anti role creation
-  titleAntiRoleCreation: () => "Anti création de rôles :",
+  titleAntiRoleCreation: () => "Anti role creation :",
   descriptionAntiRoleCreation: (guildData, message) => `
 **1)** ${
     guildData.anticreaterole.enabled
-      ? `Le plugin est activé. ${emojis.enabled}\nDepuis le <t:${Math.round(
+      ? `The plugin is activated. ${emojis.enabled}\nSince <t:${Math.round(
           guildData.anticreaterole.since / 1000
         )}:F>`
-      : `Le plugin est désactivé. ${emojis.disabled}`
+      : `The plugin is disabled. ${emojis.disabled}`
   }
 
-**2)** Sanction: **${guildData.anticreaterole.sanction}**
+**2)** Punishment: **${guildData.anticreaterole.sanction}**
 
-**3)** Au bout de combien de rôles créés l'anti raid agit: **${
+**3)** After how many roles are created the anti raid works: **${
     guildData.anticreaterole.maxaction
   }**
 
-**4)** La whitelist est prise en compte ? **${
-    guildData.anticreaterole.whitelistcompte ? "Oui" : "Non"
+**4)** Is the whitelist included? **${
+    guildData.anticreaterole.whitelistcompte ? "Yes" : "No"
   }**
-***(Si la whitelist n'est pas prise en compte, un membre whitelist qui créé un rôle sera sanctionné.)***
+***(If the whitelist is not included, a whitelist member who creates a role will be punished.)***
 
-**5)** Reset le nombre d'actions de la personne sanctionnée: **${
-    guildData.anticreaterole.resetactions ? "Oui" : "Non"
+**5)** Reset the number of actions of the punished member: **${
+    guildData.anticreaterole.resetactions ? "Yes" : "No"
   }**
 
-↩️ Retourner au menu principal.`,
+↩️ Return to the main menu.`,
   sendMemberRoleCreateLimit: () =>
-    "Entrez le nombre de rôles qu'un membre peux créer",
+    "Enter the number of roles a member can create",
   // Anti role delete
-  titleAntiRoleDelete: () => "Anti suppression de rôles :",
+  titleAntiRoleDelete: () => "Anti role deletion :",
   descriptionAntiRoleDelete: (guildData, message) => `
 **1)** ${
     guildData.antideleterole.enabled
-      ? `Le plugin est activé. ${emojis.enabled}\nDepuis le <t:${Math.round(
+      ? `The plugin is activated. ${emojis.enabled}\nSince <t:${Math.round(
           guildData.antideleterole.since / 1000
         )}:F>`
-      : `Le plugin est désactivé. ${emojis.disabled}`
+      : `The plugin is disabled. ${emojis.disabled}`
   }
 
-**2)** Sanction: **${guildData.antideleterole.sanction}**
+**2)** Punishment: **${guildData.antideleterole.sanction}**
 
-**3)** Au bout de combien de rôles supprimés l'anti raid agit: **${
+**3)** After how many deleted roles the anti raid work: **${
     guildData.antideleterole.maxaction
   }**
 
-**4)** La whitelist est prise en compte ? **${
-    guildData.antideleterole.whitelistcompte ? "Oui" : "Non"
+**4)** Is the whitelist included? **${
+    guildData.antideleterole.whitelistcompte ? "Yes" : "No"
   }**
-***(Si la whitelist n'est pas prise en compte, un membre whitelist qui supprime un rôle sera sanctionné.)***
+***(If the whitelist is not included, a whitelist member who deletes a role will be punished.)***
 
-**5)** Reset le nombre d 'actions de la personne sanctionnée: **${
-    guildData.antideleterole.resetactions ? "Oui" : "Non"
-  }**
-
-**6)** Re-créer le rôle: **${
-    guildData.antideleterole.recreatechannel ? "Oui" : "Non"
+**5)** Reset the number of actions of the punished member: **${
+    guildData.antideleterole.resetactions ? "Yes" : "No"
   }**
 
-↩️ Retourner au menu principal.`,
+**6)** Re-create role: **${
+    guildData.antideleterole.recreatechannel ? "Yes" : "No"
+  }**
+
+↩️ Return to the main menu.`,
   sendMemberRoleDeleteLimit: () =>
-    "Entrez le nombre de rôles qu'un membre peux supprimer",
+    "Enter the number of roles a member can delete",
   // Anti ban
   titleAntiBan: () => "Anti ban :",
   descriptionAntiBan: (guildData, message) => `
 **1)** ${
     guildData.antiban.enabled
-      ? `Le plugin est activé. ${emojis.enabled}\nDepuis le <t:${Math.round(
+      ? `The plugin is activated. ${emojis.enabled}\nSince <t:${Math.round(
           guildData.antiban.since / 1000
         )}:F>`
-      : `Le plugin est désactivé. ${emojis.disabled}`
+      : `The plugin is disabled. ${emojis.disabled}`
   }
 
-**2)** Sanction: **${guildData.antiban.sanction}**
+**2)** Punishment: **${guildData.antiban.sanction}**
 
-**3)** Au bout de combien de bans l'anti raid agit: **${
+**3)** After how many bans the anti raid work: **${
     guildData.antiban.maxaction
   }**
 
-**4)** La whitelist est prise en compte ? **${
-    guildData.antiban.whitelistcompte ? "Oui" : "Non"
+**4)** Is the whitelist included? **${
+    guildData.antiban.whitelistcompte ? "Yes" : "No"
   }**
-***(Si la whitelist n'est pas prise en compte, un membre whitelist qui ban sera sanctionné.)***
+***(If the whitelist is not included, a whitelist member who ban will be punished.)***
 
-**5)** Reset le nombre d'actions de la personne sanctionnée: **${
-    guildData.antiban.resetactions ? "Oui" : "Non"
-  }**
-
-**6)** Unban le membre banni: **${
-    guildData.antiban.unbanmember ? "Oui" : "Non"
+**5)** Reset the number of actions of the punished member: **${
+    guildData.antiban.resetactions ? "Yes" : "No"
   }**
 
-↩️ Retourner au menu principal.`,
+**6)** Unban the banned member: **${
+    guildData.antiban.unbanmember ? "Yes" : "No"
+  }**
+
+↩️ Return to the main menu.`,
   sendMemberBanLimit: () =>
-    "Entrez le nombre de membres qu'un modérateur peux ban",
+    "Enter the number of members a moderator can ban",
   // Anti unban
   titleAntiUnban: () => "Anti unban :",
   descriptionAntiUnban: (guildData, message) => `
 **1)** ${
     guildData.antiunban.enabled
-      ? `Le plugin est activé. ${emojis.enabled}\nDepuis le <t:${Math.round(
+      ? `The plugin is activated. ${emojis.enabled}\nSince <t:${Math.round(
           guildData.antiunban.since / 1000
         )}:F>`
-      : `Le plugin est désactivé. ${emojis.disabled}`
+      : `The plugin is disabled. ${emojis.disabled}`
   }
 
-**2)** Sanction: **${guildData.antiunban.sanction}**
+**2)** Punishment: **${guildData.antiunban.sanction}**
 
-**3)** Au bout de combien d'unbans l'anti raid agit: **${
+**3)** After how many unbans the anti raid work: **${
     guildData.antiunban.maxaction
   }**
 
-**4)** La whitelist est prise en compte ? **${
-    guildData.antiunban.whitelistcompte ? "Oui" : "Non"
+**4)** Is the whitelist included? **${
+    guildData.antiunban.whitelistcompte ? "Yes" : "No"
   }**
-***(Si la whitelist n'est pas prise en compte, un membre whitelist qui unban sera sanctionné.)***
+***(If the whitelist is not included, a whitelist member who unban will be punished.)***
 
-**5)** Reset le nombre d'actions de la personne sanctionnée: **${
-    guildData.antiunban.resetactions ? "Oui" : "Non"
+**5)** Reset the number of actions of the punished member: **${
+    guildData.antiunban.resetactions ? "Yes" : "No"
   }**
 
-**6)** Ban le membre unban: **${guildData.antiunban.banmember ? "Oui" : "Non"}**
+**6)** Ban the unban member: **${guildData.antiunban.banmember ? "Yes" : "No"}**
 
-↩️ Retourner au menu principal.`,
+↩️ Return to the main menu.`,
   sendMemberUnbanLimit: () =>
-    "Entrez le nombre de membres qu'un modérateur peux débannir",
+    "Enter the number of members a moderator can unban",
   // Anti create webhook
-  titleAntiCreateWebhook: () => "Anti création de webhooks :",
+  titleAntiCreateWebhook: () => "Anti creation of webhooks :",
   descriptionAntiCreateWebhook: (guildData, message) => `
 **1)** ${
     guildData.anticreatewebhook.enabled
-      ? `Le plugin est activé. ${emojis.enabled}\nDepuis le <t:${Math.round(
+      ? `The plugin is activated. ${emojis.enabled}\nSince <t:${Math.round(
           guildData.anticreatewebhook.since / 1000
         )}:F>`
-      : `Le plugin est désactivé. ${emojis.disabled}`
+      : `The plugin is disabled. ${emojis.disabled}`
   }
 
-**2)** Sanction: **${guildData.anticreatewebhook.sanction}**
+**2)** Punishment: **${guildData.anticreatewebhook.sanction}**
 
-**3)** Au bout de combien de webhooks créés l'anti raid agit: **${
+**3)** After how many webhooks are created the anti raid work: **${
     guildData.anticreatewebhook.maxaction
   }**
 
-**4)** La whitelist est prise en compte ? **${
-    guildData.anticreatewebhook.whitelistcompte ? "Oui" : "Non"
+**4)** Is the whitelist included? **${
+    guildData.anticreatewebhook.whitelistcompte ? "Yes" : "No"
   }**
-***(Si la whitelist n'est pas prise en compte, un membre whitelist qui créé un webhook sera sanctionné.)***
+***(If the whitelist is not included, a whitelist member who creates a webhook will be punished.)***
 
-**5)** Reset le nombre d'actions de la personne sanctionnée: **${
-    guildData.anticreatewebhook.resetactions ? "Oui" : "Non"
+**5)** Reset the number of actions of the punished member: **${
+    guildData.anticreatewebhook.resetactions ? "Yes" : "No"
   }**
 
-↩️ Retourner au menu principal.`,
+↩️ Return to the main menu.`,
   sendMemberWebhookCreateLimit: () =>
-    "Entrez le nombre de webhook qu'un membre peux créer",
+    "Enter the number of webhook that a member can create",
   // Anti give permissions
   titleAntiGivePermissions: () => "Anti give permissions :",
   descriptionAntiGivePermissions: (guildData, message) => `
 **1)** ${
     guildData.givepermission.enabled
-      ? `Le plugin est activé. ${emojis.enabled}\nDepuis le <t:${Math.round(
+      ? `The plugin is activated. ${emojis.enabled}\nSince <t:${Math.round(
           guildData.givepermission.since / 1000
         )}:F>`
-      : `Le plugin est désactivé. ${emojis.disabled}`
+      : `The plugin is disabled. ${emojis.disabled}`
   }
 
-**2)** Sanction: **${guildData.givepermission.sanction}**
+**2)** Punishment: **${guildData.givepermission.sanction}**
 
-**3)** Au bout de combien de permissions donnés l'anti raid agit: **${
+**3)** After how many permissions given the anti raid work: **${
     guildData.givepermission.maxaction
   }**
 
-**4)** La whitelist est prise en compte ? **${
-    guildData.givepermission.whitelistcompte ? "Oui" : "Non"
+**4)** Is the whitelist included? **${
+    guildData.givepermission.whitelistcompte ? "Yes" : "No"
   }**
-***(Si la whitelist n'est pas prise en compte, un membre whitelist qui donne une permission sera sanctionné.)***
+***(If the whitelist is not included, a whitelist member who gives permission will be punished.)***
 
-**5)** Reset le nombre d'actions de la personne sanctionnée: **${
-    guildData.givepermission.resetactions ? "Oui" : "Non"
+**5)** Reset the number of actions of the punished member: **${
+    guildData.givepermission.resetactions ? "Yes" : "No"
   }**
 
-**6)** Rôles ignorés par l'anti raid (Ces rôles pourront être donnés)
+**6)** Roles ignored by the anti raid (These roles can be given)
 
-↩️ Retourner au menu principal.`,
+↩️ Return to the main menu.`,
   sendMemberGivePermissionsLimit: () =>
-    "Entrez le nombre de permissions qu'un membre peux donner",
+    "Enter the number of permissions a member can give",
   // Sun reaction
   menu: () => "Menu :",
   optionsRoles: () =>
-    `**1)** Ajouter un rôle à ignorer\n**2)** Enlever un rôle à ignorer\n**3)** Liste des rôles ignorés`,
+    `**1)** Add a role to ignore\n**2)** Remove a role to ignore\n**3)** List of ignored roles`,
   ignoredRoles: (guildData) =>
-    `Rôles ignorés - (${guildData.givepermission.rolesauth.length})`,
-  addIgnoredRoles: () => "Veuillez mentionner le rôle à ignorer !",
-  roleNotFound: () => "Ce rôle est introuvable !",
-  alreadyIgnored: () => "Ce rôle est déjà dans les rôles ignorés",
-  addedIgnoredRole: (role) => `${role.name} a été ajouté aux rôles ignorés !`,
-  removeIgnoredRoles: () => "Veuillez mentionner le rôle à enlever !",
-  notIgnored: () => "Ce rôle n'est pas dans les rôles ignorés",
-  removedIgnoredRole: (role) => `${role.name} a été retiré des rôles ignorés !`,
+    `Roles ignored - (${guildData.givepermission.rolesauth.length})`,
+  addIgnoredRoles: () => "Please mention the role to be ignored!",
+  roleNotFound: () => "This role cannot be found!",
+  alreadyIgnored: () => "This role is already in the ignored roles",
+  addedIgnoredRole: (role) => `${role.name} has been added to the ignored roles!`,
+  removeIgnoredRoles: () => "Please mention the role to be removed!",
+  notIgnored: () => "This role is not in the ignored roles",
+  removedIgnoredRole: (role) => `${role.name} has been removed from the ignored roles!`,
   // Anti change url
-  titleAntiChangeURL: () => "Anti modification de l'url perso :",
+  titleAntiChangeURL: () => "Anti editing of the custom url :",
   descriptionAntiChangeURL: (guildData, message) => `
 **1)** ${
     guildData.changeurlserver.enabled
-      ? `Le plugin est activé. ${emojis.enabled}\nDepuis le <t:${Math.round(
+      ? `The plugin is activated. ${emojis.enabled}\nSince <t:${Math.round(
           guildData.changeurlserver.since / 1000
         )}:F>`
-      : `Le plugin est désactivé. ${emojis.disabled}`
+      : `The plugin is disabled. ${emojis.disabled}`
   }
 
-**2)** Sanction: **${guildData.changeurlserver.sanction}**
+**2)** Punishment: **${guildData.changeurlserver.sanction}**
 
-**3)** Au bout de combien de changements de l'url l'anti raid agit: **${
+**3)** After how many changes of the url the anti raid work: **${
     guildData.changeurlserver.maxaction
   }**
 
-**4)** La whitelist est prise en compte ? **${
-    guildData.changeurlserver.whitelistcompte ? "Oui" : "Non"
+**4)** Is the whitelist included? **${
+    guildData.changeurlserver.whitelistcompte ? "Yes" : "No"
   }**
-***(Si la whitelist n'est pas prise en compte, un membre whitelist qui modifie l'url sera sanctionné.)***
+***(If the whitelist is not included, a whitelist member who modifies the url will be punished.)***
 
-**5)** Reset le nombre d'actions de la personne sanctionnée: **${
-    guildData.changeurlserver.resetactions ? "Oui" : "Non"
+**5)** Reset the number of actions of the punished member: **${
+    guildData.changeurlserver.resetactions ? "Yes" : "No"
   }**
 
-↩️ Retourner au menu principal.`,
+↩️ Return to the main menu.`,
   sendChangeURLLimit: () =>
-    "Entrez le nombre de fois qu'un administrateur peut changer l'url",
+    "Enter the number of times an administrator can change the url",
   // Anti role modification
-  titleAntiRoleModification: () => "Anti modification des rôles :",
+  titleAntiRoleModification: () => "Anti modification of roles :",
   descriptionAntiRoleModification: (guildData, message) => `
 **1)** ${
     guildData.antichangerole.enabled
-      ? `Le plugin est activé. ${emojis.enabled}\nDepuis le <t:${Math.round(
+      ? `The plugin is activated. ${emojis.enabled}\nSince <t:${Math.round(
           guildData.antichangerole.since / 1000
         )}:F>`
-      : `Le plugin est désactivé. ${emojis.disabled}`
+      : `The plugin is disabled. ${emojis.disabled}`
   }
 
-**2)** Sanction: **${guildData.antichangerole.sanction}**
+**2)** Punishment: **${guildData.antichangerole.sanction}**
 
-**3)** Au bout de combien de permissions de rôles changés l'anti raid agit: **${
+**3)** After how many permissions of changed roles the anti raid work: **${
     guildData.antichangerole.maxaction
   }**
 
-**4)** La whitelist est prise en compte ? **${
-    guildData.antichangerole.whitelistcompte ? "Oui" : "Non"
+**4)** Is the whitelist included? **${
+    guildData.antichangerole.whitelistcompte ? "Yes" : "No"
   }**
-***(Si la whitelist n'est pas prise en compte, un membre whitelist qui modifie un rôle sera sanctionné.)***
+***(If the whitelist is not included, a whitelist member who modifies a role will be punished.)***
 
-**5)** Reset le nombre d'actions de la personne sanctionnée: **${
-    guildData.antichangerole.resetactions ? "Oui" : "Non"
+**5)** Reset the number of actions of the punished member: **${
+    guildData.antichangerole.resetactions ? "Yes" : "No"
   }**
 
-↩️ Retourner au menu principal.`,
+↩️ Return to the main menu.`,
   sendRoleModificationLimit: () =>
-    "Entrez le nombre de fois qu'un membre peux modifier un rôle",
+    "Enter the number of times a member can modify a role",
   // Anti add bot
   titleAntiAddBot: () => "Anti bot :",
   descriptionAntiAddBot: (guildData, message) => `
 **1)** ${
     guildData.antibot.enabled
-      ? `Le plugin est activé. ${emojis.enabled}\nDepuis le <t:${Math.round(
+      ? `The plugin is activated. ${emojis.enabled}\nSince <t:${Math.round(
           guildData.antibot.since / 1000
         )}:F>`
-      : `Le plugin est désactivé. ${emojis.disabled}`
+      : `The plugin is disabled. ${emojis.disabled}`
   }
 
-**2)** Sanction: **${guildData.antibot.sanction}**
+**2)** Punishment: **${guildData.antibot.sanction}**
 
-**3)** Au bout de combien de bots ajoutés l'anti raid agit: **${
+**3)** After how many bots added the anti raid work: **${
     guildData.antibot.maxaction
   }**
 
-**4)** La whitelist est prise en compte ? **${
-    guildData.antibot.whitelistcompte ? "Oui" : "Non"
+**4)** Is the whitelist included? **${
+    guildData.antibot.whitelistcompte ? "Yes" : "No"
   }**
-***(Si la whitelist n'est pas prise en compte, un membre whitelist qui ajoute un bot sera sanctionné.)***
+***(If the whitelist is not included, a whitelist member who adds a bot will be punished.)***
 
-**5)** Reset le nombre d'actions de la personne sanctionnée: **${
-    guildData.antibot.resetactions ? "Oui" : "Non"
-  }**
-
-**6)** N'autoriser que les bots certifiés à rejoindre le serveur: **${
-    guildData.antibot.onlyverif ? "Oui" : "Non"
+**5)** Reset the number of actions of the punished member: **${
+    guildData.antibot.resetactions ? "Yes" : "No"
   }**
 
-↩️ Retourner au menu principal.`,
-  sendBotAddLimit: () => "Entrez le nombre de bots que peut ajouter un membre",
+**6)** Allow only certified bots to join the server: **${
+    guildData.antibot.onlyverif ? "Yes" : "No"
+  }**
+
+↩️ Return to the main menu.`,
+  sendBotAddLimit: () => "Enter the number of bots a member can add",
 };
