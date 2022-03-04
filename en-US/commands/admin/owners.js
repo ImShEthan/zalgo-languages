@@ -1,16 +1,16 @@
 const { emojis } = require("../../../../config");
 module.exports = {
-  mainMenu: () => "Menu des owners :",
+  mainMenu: () => "Owner's menu :",
   mainOptions: () =>
-    `**1)** Ajouter une personne à la liste\n**2)** Enlever une personne de la liste\n**3)** Supprimer la liste\n**4)** Liste des owners`,
+    `**1)** Add a member to the list\n**2)** Remove a member from the list\n**3)** Remove the list\n**4)** List of owners`,
 
-  userNotFound: () => "Cet utilisateur est introuvable !",
+  userNotFound: () => "This user cannot be found!",
 
-  userToAdd: () => "Veuillez mentionner la personne à ajouter à la liste",
-  alreadyInBlacklist: (user) => `${user.tag} est déjà dans la liste !`,
-  userAdded: (user) => `${user.tag} a été ajouté à la liste !`,
+  userToAdd: () => "Please mention the member to be added to the list",
+  alreadyInBlacklist: (user) => `${user.tag} is already in the list!`,
+  userAdded: (user) => `${user.tag} jean has been added to the list!`,
 
-  userToRemove: () => "Veuillez mentionner la personne à retirer de la liste",
-  notYetInBlacklist: () => `Cette personne n'est pas dans la liste !`,
-  userRemoved: (user) => `${user.tag} a été retiré de la liste !`,
+  userToRemove: () => "Please mention the member to be removed from the list",
+  notYetInBlacklist: () => `This person is not in the list!`,
+  userRemoved: (user) => `${user.tag} has been removed from the list!`,
 };
