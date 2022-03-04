@@ -1,28 +1,28 @@
 const { emojis } = require("../../../../config");
 module.exports = {
   description: (message, guildData) => `                     
-**1)** Empêcher l'envoie de messages avec majuscules excessives\n${
+**1)** Prevent sending messages with excessive capitals\n${
     guildData.enabled
-      ? `${emojis.enabled} Activé\nDepuis le <t:${Math.round(
+      ? `${emojis.enabled} Enabled\nSince <t:${Math.round(
           guildData.since / 1000
         )}:F>`
-      : `${emojis.disabled} Désactivé`
+      : `${emojis.disabled} Disabled`
   }
 
-**2)** Ignorer des salons pour l'envoie avec majuscules excessives`,
+**2)** Ignore channels for sending with excessive capitals`,
 
   listDescription: () =>
-    `**1)** Ajouter un salon à ignorer\n**2)** Enlever un salon à ignorer\n**3)** Liste des salons ignorés`,
+    `**1)** Add a channel to ignore\n**2)** Remove a channel to ignore\n**3)** List of ignored channels`,
 
-  title: (count) => `Salons ignorés - (${count})`,
+  title: (count) => `Ignored channels - (${count})`,
 
-  noFoundChannel: () => `Ce salon est introuvable !`,
+  noFoundChannel: () => `This channel can't be found!`,
 
-  addChannelQuestion: () => `Veuillez mentionner le salon à ignorer !`,
-  channelAlreadyExist: () => `Ce salon est déjà dans les salons ignorés`,
-  successAdd: (salon) => `${salon} a été ajouté aux salons ignorés !`,
+  addChannelQuestion: () => `Please mention which channel to ignore!`,
+  channelAlreadyExist: () => `This channel is already in ignored channels`,
+  successAdd: (salon) => `${salon} has been added to ignored channels!`,
 
-  removeChannelQuestion: () => `Veuillez mentionner le salon retirer !`,
-  channelAlreadyNoExist: () => `Ce salon n'est pas dans les salons ignorés`,
-  successRemove: (salon) => `${salon} a été retiré des salons ignorés !`,
+  removeChannelQuestion: () => `Please mention the channel to be removed!`,
+  channelAlreadyNoExist: () => `This channel is not in the ignored channels`,
+  successRemove: (salon) => `${salon} has been removed from ignored channels!`,
 };
