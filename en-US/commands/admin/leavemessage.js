@@ -1,49 +1,49 @@
 const { emojis } = require("../../../../config");
 module.exports = {
   questionTime: () =>
-    `Veuillez entrer le temps au quel le message sera supprimé !`,
+    `Please enter the time at which the message will be deleted!`,
   invalidTimes: () =>
-    `${emojis.error} | Vous devez entrer un temps valide ! Unités valides : \`s\`, \`m\`, \`h\`, \`d\`, \`w\`, \`y\``,
+    `${emojis.error} | You must enter a valid time! Valid units: \`s\`, \`m\`, \`h\`, \`d\`, \`w\`, \`y\``,
   desc: (message, guildData, formattedMessage) => `
-**1)** __Messages de départ__
+**1)** __Leaving messages__
 ${
   guildData.enabled
-    ? `${emojis.enabled} Activé`
-    : `${emojis.disabled} Désactivé`
+    ? `${emojis.enabled} Enabled`
+    : `${emojis.disabled} Disabled`
 }
 
-**2)** __Salon des messages de départ__
+**2)** __Leaving messages channel__
 ${
   guildData.channel
     ? message.guild.channels.cache.get(guildData.channel)
       ? message.guild.channels.cache.get(guildData.channel)
-      : "Aucun salon."
-    : "Aucun salon."
+      : "No channel."
+    : "No channel."
 }
 
 **3)** __Message__
 ${
   guildData.message
     ? guildData.message.length > 800
-      ? guildData.message.slice(0, 800) + "** et plus...**"
+      ? guildData.message.slice(0, 800) + "** and more...**"
       : guildData.message
-    : "Aucun message."
+    : "No message."
 }
 
-**4)** __Supprimer le message__
+**4)** __Delete the message__
 ${
   guildData.deletemessage
-    ? "Au bout de " + message.language.convertMs(guildData.deletemessage)
-    : "Non"
+    ? "After " + message.language.convertMs(guildData.deletemessage)
+    : "No"
 }
 
 
 __**Preview:**__
-${formattedMessage !== "** **" ? formattedMessage : "Aucun message."}
+${formattedMessage !== "** **" ? formattedMessage : "No message."}
 `,
 
-  questionChannel: () => `Quel sera le salon des messages de départ ?`,
-  questionMessage: () => `Quel sera le message de départ ?`,
-  error: () => `Votre message contient trop de caractères !`,
-  nofind: () => `Salon introuvable !`,
+  questionChannel: () => `What will be the leaving message channel?`,
+  questionMessage: () => `What will be the leaving message?`,
+  error: () => `Your message contains too many characters!`,
+  nofind: () => `Channel not found !`,
 };
