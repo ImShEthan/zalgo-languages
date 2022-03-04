@@ -3,98 +3,98 @@ module.exports = {
   description: (message, guildData) => `
 **1)** Anti-spam\n${
     guildData.enabled
-      ? `${emojis.enabled} Activé\nDepuis le <t:${Math.round(
+      ? `${emojis.enabled} Enabled\nSince <t:${Math.round(
           Number(guildData.since) / 1000
         )}:F>`
-      : `${emojis.disabled} Désactivé`
+      : `${emojis.disabled} Disabled`
   }
 
-**2)** Ignorer les bots\n${
+**2)** Ignore bots\n${
     guildData.ignorebots
-      ? `${emojis.enabled} Activé`
-      : `${emojis.disabled} Désactivé`
+      ? `${emojis.enabled} Enabled`
+      : `${emojis.disabled} Disabled`
   }
 
-**3)** Configurer les rôles ignorés
+**3)** Configure ignored roles
 
-**4)** Configurer les salons ignorés
+**4)** Configure ignored channels
 
-**5)** Interval de messages\n**${message.language.convertMs(
+**5)** Message interval\n**${message.language.convertMs(
     Number(guildData.maxinterval)
   )}**
 
-**6)** Supprimer les messages\n${
+**6)** Delete messages\n${
     guildData.deletemessages
-      ? `${emojis.enabled} Activé`
-      : `${emojis.disabled} Désactivé`
+      ? `${emojis.enabled} Enabled`
+      : `${emojis.disabled} Disabled`
   }
 
-**7)** A combien de messages un membre se fait **avertir** ?\n**${Number(
+**7)** How many messages does a member get **warned**?\n**${Number(
     guildData.maxduplicateswarn
-  )}** messages spam
+  )}** spam messages
 
-**8)** A combien d 'avertissements un membre se fait **mute** ?\n**${Number(
+**8)** How many warnings does a member get **muted** at?\n**${Number(
     guildData.maxduplicatesmute
-  )}** avertissements
+  )}** warnings
 
-**9)** Temps du mute\n**${message.language.convertMs(
+**9)** Mute time\n**${message.language.convertMs(
     Number(guildData.timemute)
   )}**
 
-**10)** Activé des paramètres pour un anti-spam plus performant
+**10)** Enable settings for better anti-spam
 `,
 
-  questionTime: () => `Veuillez entrer le temps du mute !`,
+  questionTime: () => `Please enter the mute time!`,
   invalidTimes: () =>
-    `${emojis.error} | Vous devez entrer un temps valide ! Unités valides : \`s\`, \`m\`, \`h\`, \`d\`, \`w\`, \`y\``,
+    `${emojis.error} | You must enter a valid time! Valid units: \`s\`, \`m\`, \`h\`, \`d\`, \`w\`, \`y\``,
 
   advertMessages: () =>
-    `Au bout de combien de messages un membre se fait avertir ?`,
-  errorQuestion: () => `Entrez un nombre valide !`,
-  errorQuestion: () => `Entrez un chiffre au dessus de 1 !`,
+    `After how many messages does a member get warned?`,
+  errorQuestion: () => `Enter a valid number!`,
+  errorQuestion: () => `Enter a number above 1!`,
 
   question1: () =>
-    `Au bout de combien d'avertissements un membre se fait mute ?`,
+    `After how many warnings a member is muted?`,
 
-  interval: () => `Veuillez envoyer l'interval ! (ex: 3s)`,
+  interval: () => `Please send the interval! (ex: 3s)`,
 
   listDescriptionRole: () =>
     `
-**1)** Ajouter un rôle à ignorer
-**2)** Enlever un rôle à ignorer
+**1)** Add a role to ignore
+**2)** Remove a role to ignore
 
-**3)** Ajouter un salon à ignorer
-**4)** Enlever un salon à ignorer`,
+**3)** Add a channel to ignore
+**4)** Remove a channel to ignore`,
 
-  titleRole: (count) => `Rôles ignorés - (${count})`,
+  titleRole: (count) => `Ignored roles - (${count})`,
 
-  noFoundRole: () => `Ce rôle est introuvable !`,
+  noFoundRole: () => `This role can't be found!`,
 
-  addRoleQuestion: () => `Veuillez mentionner le rôle à ignorer !`,
-  roleAlreadyExist: () => `Ce salon est déjà dans les rôles ignorés`,
-  successAddRole: (salon) => `${salon} a été ajouté aux rôles ignorés !`,
+  addRoleQuestion: () => `Please mention the role to ignore!`,
+  roleAlreadyExist: () => `This role is already in the ignored roles`,
+  successAddRole: (salon) => `${salon} has been added to ignored roles!`,
 
-  removeRoleQuestion: () => `Veuillez mentionner le rôle retirer !`,
-  roleAlreadyNoExist: () => `Ce rôle n'est pas dans les rôles ignorés`,
-  successRemoveRole: (salon) => `${salon} a été retiré des rôles ignorés !`,
+  removeRoleQuestion: () => `Please mention the role remove!`,
+  roleAlreadyNoExist: () => `This role is not in the ignored roles`,
+  successRemoveRole: (salon) => `${salon} has been removed from ignored roles!`,
 
   listDescription: () =>
     `
-**1)** Ajouter un rôle à ignorer
-**2)** Enlever un rôle à ignorer
+**1)** Add a role to ignore
+**2)** Remove a role to ignore
 
-**3)** Ajouter un salon à ignorer
-**4)** Enlever un salon à ignorer`,
+**3)** Add a channel to ignore
+**4)** Remove a channel to ignore`,
 
-  title: (count) => `Salons ignorés - (${count})`,
+  title: (count) => `Ignored channels - (${count})`,
 
-  noFoundChannel: () => `Ce salon est introuvable !`,
-  returnmainmenu: () => `Retour au menu principal`,
-  addChannelQuestion: () => `Veuillez mentionner le salon à ignorer !`,
-  channelAlreadyExist: () => `Ce salon est déjà dans les salons ignorés`,
-  successAdd: (salon) => `${salon} a été ajouté aux salons ignorés !`,
+  noFoundChannel: () => `This channel can't be found!`,
+  returnmainmenu: () => `Back to main menu`,
+  addChannelQuestion: () => `Please mention which channel to ignore!`,
+  channelAlreadyExist: () => `This channel is already in ignored channels`,
+  successAdd: (salon) => `${salon} has been added to ignored channels!`,
 
-  removeChannelQuestion: () => `Veuillez mentionner le salon retirer !`,
-  channelAlreadyNoExist: () => `Ce salon n'est pas dans les salons ignorés`,
-  successRemove: (salon) => `${salon} a été retiré des salons ignorés !`,
+  removeChannelQuestion: () => `Please mention the channel to be removed!`,
+  channelAlreadyNoExist: () => `This channel is not in the ignored channels`,
+  successRemove: (salon) => `${salon} has been removed from ignored channels!`,
 };
