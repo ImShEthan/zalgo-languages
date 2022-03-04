@@ -4,40 +4,40 @@ module.exports = {
 **1)** __Anti Mass Join: __
 ${
   data.enabled
-    ? "<:enabled_mys:797495648421281822> Activé"
-    : "<:disabled_mys:797495585480638464> Désactivé"
+    ? "<:enabled_mys:797495648421281822> Enabled"
+    : "<:disabled_mys:797495585480638464> Disabled"
 }
 
 **2)** **${
     data.maxmembers
-  }** membres maximum pourront rejoindre le serveur en 10 secondes
+  }** maximum members will be able to join the server in 10 seconds
 
-**3)** __Expulser les nouveaux membres tant que le serveur n 'aura pas désactivé la protection__:
+**3)** __Kick new members until server disables protection__:
 ${
   data.raid
-    ? "<:enabled_mys:797495648421281822> Oui"
-    : "<:disabled_mys:797495585480638464> Non"
+    ? "<:enabled_mys:797495648421281822> Yes"
+    : "<:disabled_mys:797495585480638464> No"
 }
 
-**4)** __Etat de la protection: __
+**4)** __Protection status: __
 ${
   data.raidmode
-    ? "<:enabled_mys:797495648421281822> Serveur fermé"
-    : "<:disabled_mys:797495585480638464> Serveur ouvert"
+    ? "<:enabled_mys:797495648421281822> Server closed"
+    : "<:disabled_mys:797495585480638464> Open server"
 }`,
 
   question: () =>
-    `Combien de membres pourront rejoindre le serveur en 10 secondes ?`,
-  error: () => `Chiffre invalide !`,
+    `How many members will be able to join the server in 10 seconds?`,
+  error: () => `Invalid number!`,
   lock: (message) =>
-    `Le serveur est maintenant **fermé** par ${message.author.tag}`,
+    `The server is now **closed** by ${message.author.tag}`,
   unlock: (message) =>
-    `Le serveur est maintenant **ouvert** par ${message.author.tag}`,
+    `The server is now **open** by ${message.author.tag}`,
 
   msgKick: () =>
-    `Le serveur est actuellement fermé car trop de membres ont rejoint en peu de temps ! Réessayez de rejoindre plus tard.`,
+    `The server is currently closed because too many members have joined in a short time! Try joining again later.`,
   reasonKick: () =>
-    `Le serveur est actuellement fermé car trop de membres ont rejoint en peu de temps !`,
+    `The server is currently closed because too many members have joined in a short time!`,
   msg: () =>
-    `Le serveur est maintenant **fermé** car trop de membres ont rejoint en peu de temps.`,
+    `The server is now **closed** because too many members joined in a short time.`,
 };
