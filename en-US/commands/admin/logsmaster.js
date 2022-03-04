@@ -1,86 +1,86 @@
 const { emojis } = require("../../../../config");
 module.exports = {
   functionDesactived: () =>
-    `${emojis.error} | Cette fonction de logs est actuellement supprimée.`,
+    `${emojis.error} | This function of logs is currently removed.`,
 
   mainEmbedDescription: (message, guildLogs) => `
 **1)** __Boost :__\n${guildLogs.boost ? emojis.enabled : emojis.disabled} ${
     guildLogs.boost
-      ? `Salon défini\n${
+      ? `Defined channel\n${
           message.guild.channels.cache.get(guildLogs.boost)
             ? message.guild.channels.cache.get(guildLogs.boost)
-            : "Introuvable"
+            : "Not found"
         }`
-      : "Salon non défini"
+      : "Channel not defined"
   }
           
-**2)** __Modération :__\n${
+**2)** __Moderation :__\n${
     guildLogs.moderator ? emojis.enabled : emojis.disabled
   } ${
     guildLogs.moderator
-      ? `Salon défini\n${
+      ? `Defined channel\n${
           message.guild.channels.cache.get(guildLogs.moderator)
             ? message.guild.channels.cache.get(guildLogs.moderator)
-            : "Introuvable"
+            : "Not found"
         }`
-      : "Salon non défini"
+      : "Channel not defined"
   }
           
 **3)** __Messages :__\n${
     guildLogs.messages ? emojis.enabled : emojis.disabled
   } ${
     guildLogs.messages
-      ? `Salon défini\n${
+      ? `Defined channel\n${
           message.guild.channels.cache.get(guildLogs.messages)
             ? message.guild.channels.cache.get(guildLogs.messages)
-            : "Introuvable"
+            : "Not found"
         }`
-      : "Salon non défini"
+      : "Channel not defined"
   }
           
 **4)** __Anti Raid :__\n${
     guildLogs.antiraid ? emojis.enabled : emojis.disabled
   } ${
     guildLogs.antiraid
-      ? `Salon défini\n${
+      ? `Defined channel\n${
           message.guild.channels.cache.get(guildLogs.antiraid)
             ? message.guild.channels.cache.get(guildLogs.antiraid)
-            : "Introuvable"
+            : "Not found"
         }`
-      : "Salon non défini"
+      : "Channel not defined"
   }
           
-**5)** __Serveur :__\n${guildLogs.server ? emojis.enabled : emojis.disabled} ${
+**5)** __Server :__\n${guildLogs.server ? emojis.enabled : emojis.disabled} ${
     guildLogs.server
-      ? `Salon défini\n${
+      ? `Defined channel\n${
           message.guild.channels.cache.get(guildLogs.server)
             ? message.guild.channels.cache.get(guildLogs.server)
-            : "Introuvable"
+            : "Not found"
         }`
-      : "Salon non défini"
+      : "Channel not defined"
   }
           
 **6)** __Voices :__\n${guildLogs.voice ? emojis.enabled : emojis.disabled} ${
     guildLogs.voice
-      ? `Salon défini\n${
+      ? `Defined channel\n${
           message.guild.channels.cache.get(guildLogs.voice)
             ? message.guild.channels.cache.get(guildLogs.voice)
-            : "Introuvable"
+            : "Not found"
         }`
-      : "Salon non défini"
+      : "Channel not defined"
   }`,
 
   whatChannelModLogs: () =>
-    "Dans quel salon voulez-vous vous les logs de modération ?",
+    "How would you like to have the moderation logs?",
   whatChannelDelmsgLogs: () =>
-    "Dans quel salon voulez-vous vous les logs de messages supprimés ?",
+    "How would you like to have the logs of deleted messages?",
   whatChannelRaidLogs: () =>
-    "Dans quel salon voulez-vous vous les logs de l'anti raid ?",
+    "How would you like to have the anti raid logs?",
   whatChannelServerLogs: () =>
-    "Dans quel salon voulez-vous vous les logs du serveur ?",
+    "How would you like to have the server logs?",
   whatChannelVoiceLogs: () =>
-    "Dans quel salon voulez-vous vous les logs vocaux ?",
+    "How would you like to have the voice logs?",
   whatBoostChannel: () =>
-    "Dans quel salon voulez-vous vous les messages de boost ?",
-  channelNotFound: () => `Salon introuvable !`,
+    "How do you want to get the boost messages?",
+  channelNotFound: () => `Channel not found !`,
 };
