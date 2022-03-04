@@ -41,7 +41,7 @@ module.exports = {
     Number(guildData.timemute)
   )}**
 
-**10)** Activé des paramètres pour un anti-spam plus performant
+**10)** Activer des paramètres pour un anti-spam plus performant
 `,
 
   questionTime: () => `Veuillez entrer le temps du mute !`,
@@ -71,7 +71,7 @@ module.exports = {
   noFoundRole: () => `Ce rôle est introuvable !`,
 
   addRoleQuestion: () => `Veuillez mentionner le rôle à ignorer !`,
-  roleAlreadyExist: () => `Ce salon est déjà dans les rôles ignorés`,
+  roleAlreadyExist: () => `Ce rôle est déjà dans les rôles ignorés`,
   successAddRole: (salon) => `${salon} a été ajouté aux rôles ignorés !`,
 
   removeRoleQuestion: () => `Veuillez mentionner le rôle retirer !`,
