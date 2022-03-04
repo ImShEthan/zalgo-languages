@@ -2,42 +2,42 @@ const { emojis } = require("../../../../config");
 module.exports = {
   title: () => "PermissionManager",
   mainEmbedDescription: () => `
-**1)** Ajouter un rôle à la permission ** Modérateur **
-**2)** Enlever un rôle à la permission ** Modérateur **
-**3)** Liste des rôles permission Modérateur
+**1)** Add a role to the permission ** Moderator **
+**2)** Remove a role from the permission ** Moderator **
+**3)** List of roles permission Moderator
     
-__**Les commandes giveaways nécessitent la permission Administrateur.**__
-~~**4)** Ajouter un rôle à la permission ** Giveaway **
-**5)** Enlever un rôle à la permission ** Giveaway **
-**6)** Liste des rôles permission Giveaway~~
+__**Giveaways commands require Administrator permission.**__
+~~**4)** Add a role to the permission ** Giveaway **
+**5)** Remove a role from the permission ** Giveaway **
+**6)** List of permission roles Giveaway~~
 
-**7)** Ajouter un rôle à la permission ** Kick des membres **
-**8)** Enlever un rôle à la permission ** Kick des membres **
-**9)** Liste des rôles permission Kick des membres
+**7)** Add a role to the permission ** Kick members **
+**8)** Remove a role from the permission ** Kick members **
+**9)** List of roles permission Kick members
 
-**10)** Ajouter un rôle à la permission **Ban des membres**
-**11)** Enlever un rôle à la permission **Ban des membres**
-**12)** Liste des rôles permission Ban des membres
+**10)** Add a role to the permission **Ban members**
+**11)** Remove a role from the permission **Ban memberes**
+**12)** List of roles permission Ban members
 
-**13)** Ajouter un rôle à la permission **Administrateur**
-**14)** Enlever un rôle à la permission **Administrateur**
-**15)** Liste des rôles permission Administrateur        
+**13)** Add a role to the permission **Administrator**
+**14)** Remove a role from the permission **Administrator**
+**15)** List of roles permission Administrator        
       `,
   moderatorRoles: (guildPermissions) =>
-    `Rôles modérateurs - (${guildPermissions.moderators.length})`,
+    `Roles moderators - (${guildPermissions.moderators.length})`,
   giveawayRoles: (guildPermissions) =>
-    `Rôles giveaways - (${guildPermissions.giveaways.length})`,
+    `Roles giveaways - (${guildPermissions.giveaways.length})`,
   kickerRoles: (guildPermissions) =>
-    `Rôles Kick des membres - (${guildPermissions.kick.length})`,
+    `Roles Kick members - (${guildPermissions.kick.length})`,
   bannerRoles: (guildPermissions) =>
-    `Rôles Ban des membres - (${guildPermissions.ban.length})`,
+    `Roles Ban members - (${guildPermissions.ban.length})`,
   adminRoles: (guildPermissions) =>
-    `Rôles Administrateurs - (${guildPermissions.admins.length})`,
-  sendRole: () => "Veuillez mentionner le rôle !",
-  roleNotFound: () => "Rôle non trouvé",
-  alreadyMod: () => "Le rôle est déjà modérateur !",
-  alreadyGiveawayManager: () => "Le rôle est déjà permission Giveaway !",
-  alreadyKicker: () => "Le rôle est déjà permission Kick !",
-  alreadyBanner: () => "Le rôle est déjà permission Ban !",
-  alreadyAdmin: () => "Le rôle est déjà permission Admin !",
+    `Roles Administrator - (${guildPermissions.admins.length})`,
+  sendRole: () => "Please mention the role!",
+  roleNotFound: () => "Role not found",
+  alreadyMod: () => "The role is already a moderator!",
+  alreadyGiveawayManager: () => "The role is already permission Giveaway!",
+  alreadyKicker: () => "The role is already permission Kick!",
+  alreadyBanner: () => "The role is already permission Ban!",
+  alreadyAdmin: () => "The role is already permission Admin!",
 };
