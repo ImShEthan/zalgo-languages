@@ -1,17 +1,17 @@
 const { emojis } = require("../../../../config");
 module.exports = {
   desc: (member, memberData, message, calc) => `${
-    member.id === message.member.id ? `Tu as` : `**${member.user.username}** a`
+    member.id === message.member.id ? `You have` : `**${member.user.username}** has`
   } **${calc}** invitations. 
 
-**${memberData.invites}** invitations normales.
-**${memberData.bonus}** invitations bonus.
+**${memberData.invites}** regular invitations.
+**${memberData.bonus}** bonus invitations.
 **${
     memberData.fake > 0 ? `-${memberData.fake}` : `${memberData.fake}`
-  }** invitations fakes.
+  }** fake invitations.
 **${
     memberData.leaves > 0 ? `-${memberData.leaves}` : `${memberData.leaves}`
-  }** invitations leaves.
+  }** leave invitations
 
 `,
 };
