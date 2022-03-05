@@ -1,15 +1,15 @@
 const { emojis } = require("../../../../config");
 module.exports = {
   userNotFound: () =>
-    `${emojis.error} | Cette personne n'est pas sur le serveur ou est introuvable !`,
-  noChangeAvatars: () => `Ce membre n'a encore jamais changé d'avatar.`,
+    `${emojis.error} | This person is not on the server or cannot be found!`,
+  noChangeAvatars: () => `This member has never changed avatar before.`,
 
   question: () =>
-    `**1)** Afficher tous les avatars\n**2)** Afficher les avatars \`GIF\`\n**3)** Afficher les avatars \`PNG\``,
+    `**1)** Show all avatars\n**2)** Show avatars \`GIF\`\n**3)** Show avatars \`PNG\``,
 
-  avatarChange: () => `Avatar changé le`,
+  avatarChange: () => `Avatar changed on`,
 
   title1: (user) => `Avatars de ${user.tag}`,
-  title2: (user) => `Avatars (GIF) de ${user.tag}`,
-  title3: (user) => `Avatars (PNG) de ${user.tag}`,
+  title2: (user) => `Avatars (GIF) of ${user.tag}`,
+  title3: (user) => `Avatars (PNG) of ${user.tag}`,
 };
