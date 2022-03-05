@@ -1,29 +1,29 @@
 const { emojis } = require("../../../../config");
 module.exports = {
   mainEmbedDescription: (data, message) => `
-__**1)** Ajouter un rôle__
+__**1)** Add a role__
 
-__**2)** Retirer un rôle__
+__**2)** Remove a role__
 
-__**3)** Attendre que l'utilisateur accepte les règles du serveur avant d'attribuer les rôles.__
-${data.waitrules ? `${emojis.enabled} Oui` : `${emojis.disabled} Non`}
+__**3)** Wait for the user to accept the server rules before adding the roles.__
+${data.waitrules ? `${emojis.enabled} Yes` : `${emojis.disabled} No`}
 
-__**Rôles:**__
+__**Roles:**__
 ${
   data.roles.length > 0
     ? data.roles
         .map((x) => message.guild.roles.cache.get(x))
         .slice(0, 2)
         .join(", ")
-    : "Aucun rôle"
+    : "No role."
 }
           `,
-  sendRole: () => "Veuillez envoyer le rôle que les membres recevront !",
+  sendRole: () => "Please send the role that members will be given!",
   removeRole: () =>
-    "Veuillez envoyer le rôle que les membres ne recevront plus !",
-  roleNotFound: () => "Rôle non trouvé",
-  roleRemoved: () => `Rôle retiré`,
+    "Please send the role that members will no longer to receive!",
+  roleNotFound: () => "Role not found",
+  roleRemoved: () => `Role removed`,
   max5roles: () =>
-    `Vous ne pouvez mettre que maximum 5 rôles dans les rôles ayant accès aux tickets !`,
-  roleAdded: () => `Rôle ajouté`,
+    `You can only add a maximum of 5 roles to the roles!`,
+  roleAdded: () => `Role added`,
 };
