@@ -9,7 +9,7 @@ module.exports = {
 <:bughunter2_mys:843256907451334696> = Bug hunter level 2 for the bot
 <:bughunter_mys:724907374577451019> = Bug hunter level 1 for the bot
 <:discordPartner_mys1:861009530523090964> = Bot partner
-<:nitro_mys:726530932164657184> = Bot donor
+<:nitro_mys:726530932164657184> = Bot donator
 <:boost_mys:720681779979354204> = Premium of the bot
 <:earlysupporter_mys:724907052287393862> = Joined the Zalgo server between the creation of the bot and its 1 year.
 `,
