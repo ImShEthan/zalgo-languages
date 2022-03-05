@@ -1,23 +1,23 @@
 const { emojis } = require("../../../../config");
 module.exports = {
-  userNotFound: () => `${emojis.error} | Utilisateur introuvable !`,
+  userNotFound: () => `${emojis.error} | User not found!`,
   userIsYou: () =>
-    `${emojis.error} | Vous ne pouvez pas vous sanctionner vous-même !`,
-  youCantBan: () => `${emojis.error} | Vous ne pouvez pas ban cette personne !`,
+    `${emojis.error} | You can't punish yourself!`,
+  youCantBan: () => `${emojis.error} | You can't ban this user!`,
   userInWl: () =>
-    `${emojis.error} | Cette personne est dans la whitelist et ne peut pas être ban !`,
+    `${emojis.error} | This user is in the whitelist and can't be banned!`,
 
-  noReason: () => `pas de raison donnée`,
-  success1: (user) => user.tag + " a été banni !",
-  success: (user) => user.tag + " a été banni !",
-  desc: () => `**Raison:**`,
-  mod: () => `Modérateur:`,
+  noReason: () => `no reason given`,
+  success1: (user) => user.tag + " has been banned !",
+  success: (user) => user.tag + " has been banned !",
+  desc: () => `**Reason:**`,
+  mod: () => `Moderator:`,
 
-  util: () => `Utilisateur :`,
-  reason: () => `Raison`,
+  util: () => `User :`,
+  reason: () => `Reason`,
 
-  num: () => `Nombres de sanctions:`,
+  num: () => `Number of sanctions:`,
 
   error: () =>
-    `${emojis.error} | Une erreur est survenue ! Veuillez vérifier que je sois au dessus de la personne !`,
+    `${emojis.error} | An error has occurred! Please check that I am above the user!`,
 };
