@@ -1,15 +1,15 @@
 const { emojis } = require("../../../../config");
 module.exports = {
   userNotFound: () =>
-    `${emojis.error} | Cette personne n'est pas présente sur ce serveur !`,
-  bot: () => `${emojis.error} | Cette utilisateur est un bot !`,
+    `${emojis.error} | This person is not present on this server!`,
+  bot: () => `${emojis.error} | This user is a bot!`,
 
-  dnd: () => `Ne pas déranger`,
-  idle: () => `Inactif`,
-  online: () => `En ligne`,
-  offline: () => `Hors ligne`,
+  dnd: () => `Do not disturb`,
+  idle: () => `Idle`,
+  online: () => `Online`,
+  offline: () => `Offline`,
 
-  utilTitle: () => `${emojis.id} Utilisateur`,
+  utilTitle: () => `${emojis.id} User`,
   util: (
     user,
     member,
@@ -27,21 +27,21 @@ module.exports = {
     platform
   ) => [
     `**❯ Username:** ${user.username}`,
-    `**❯ Discriminateur:** ${user.discriminator}`,
+    `**❯ Discriminator:** ${user.discriminator}`,
     `**❯ ID:** ${user.id}`,
-    `**❯ Badges Discord:** ${
+    `**❯ Discord badges:** ${
       userFlags.length
         ? userFlags.map((flag) => flags[flag]).join(", ") +
           `${badgesnitro ? ", <:nitro_mys:726530932164657184>" : ""}`
-        : "Aucun badge."
+        : "No badges."
     }`,
-    `**❯ Badges Zalgo:** ${
+    `**❯ Zalgo badges:** ${
       badgesBot.length
         ? badgesBot.map((flag) => badgesZalgo[flag]).join(", ")
-        : "Aucun badge."
-    }\n***❯❯❯ Description des badges: \`${prefix}zalgo-badges\`***`,
+        : "No badges."
+    }\n***❯❯❯ Description of badges: \`${prefix}zalgo-badges\`***`,
     `**❯ Avatar:** [Lien](${user.displayAvatarURL({ dynamic: true })})`,
-    `**❯ Créé :** ${
+    `**❯ Created on :** ${
       creationDate.charAt(0).toUpperCase() +
       creationDate.substr(1, creationDate.length)
     } (${creationDateUnix})`,
@@ -49,26 +49,26 @@ module.exports = {
       emojisList[
         member.presence ? member.presence.status : "offline" || "offline"
       ]
-    } Statut:** ${statut}`,
-    `**❯ Plateforme(s):** ${platform}`,
+    } Status:** ${statut}`,
+    `**❯ Platform(s):** ${platform}`,
     `\u200b`,
   ],
-  membTitle: () => `${emojis.users} Membre`,
+  membTitle: () => `${emojis.users} Member`,
 
   fields: {
     createdAt: {
-      title: () => `Création`,
+      title: () => `Creation`,
     },
     joinedAt: {
-      title: () => `Arrivée`,
+      title: () => `Arrival`,
     },
     joinWay: {
-      title: () => `Arrivée grâce à`,
-      oauth: () => `Invitation oauth2 (via discordapp.com).`,
+      title: () => `Arrival thanks to`,
+      oauth: () => `Oauth2 invite (via discordapp.com).`,
       vanity: () =>
-        `Invitation personnalisée configurée par un administrateur.`,
+        `Personalized invitation configured by an administrator.`,
       unknown: (user) =>
-        `Impossible de déterminer comment ${user.username} a rejoint le serveur.`,
+        `Unable to determine how ${user.username} joined the server.`,
       invite: (user) => user.tag,
     },
     invites: {
@@ -79,18 +79,18 @@ module.exports = {
           inviteData.bonus -
           inviteData.leaves -
           inviteData.fake
-        }** invitations (**${inviteData.invites}** ordinaires, **${
+        }** invitations (**${inviteData.invites}** common, **${
           inviteData.bonus
         }** bonus, **${
           inviteData.fake > 0 ? `-${inviteData.fake}` : `${inviteData.fake}`
-        }** faux, **${
+        }** fake, **${
           inviteData.leaves > 0
             ? `-${inviteData.leaves}`
             : `${inviteData.leaves}`
-        }** partis)`,
+        }** left)`,
     },
     joinOrder: {
-      title: () => `Ordre d'arrivées`,
+      title: () => `Order of arrival`,
       content: (previous, next, user) =>
         `${previous ? `${previous.tag} > ` : ""}${user.tag}${
           next ? ` > ${next.tag}` : ""
@@ -107,50 +107,50 @@ module.exports = {
     member,
     message
   ) => [
-    `**❯ Rejoins :** ${
+    `**❯ Join:** ${
       joinDate.charAt(0).toUpperCase() + joinDate.substr(1, joinDate.length)
     } (${joinDateUnix})`,
-    `**❯ Rejoins grâce à:** ${joinWay}`,
-    `**❯ Ordre:** ${fields.joinOrder.content(previous, next, member.user)}`,
-    `**❯ Plus haut rôle:** ${
+    `**❯ Join with:** ${joinWay}`,
+    `**❯ Order:** ${fields.joinOrder.content(previous, next, member.user)}`,
+    `**❯ Highest role:** ${
       member.roles.highest.id === message.guild.id
-        ? "Aucun rôle"
+        ? "Ro roles"
         : member.roles.highest.name
     }`,
     `\u200b`,
   ],
-  voc: (member, count) => `**❯ Salon:** ${member.voice.channel.name} (${
+  voc: (member, count) => `**❯ Channel:** ${member.voice.channel.name} (${
     member.voice.channel.id
-  })\n\`${count}\` personne(s) dans ce salon.
+  })\n\`${count}\` person(s) in this channel.
 
-Mute **micro serveur**: ${
+Mute **micro server**: ${
     member.voice.serverMute
       ? "<:mute_mys1:769947846496747562>"
       : "<:unmute_mys1:769947930177699841>"
   }
-Mute **casque serveur**: ${
+Mute **server headset**: ${
     member.voice.serverDeaf
       ? "<:muteCasque_mys1:769948019780354088>"
       : "<:unmuteCasque_mys1:769947990512238613>"
   }
 
-Mute **micro localement**: ${
+Mute **micro locally**: ${
     member.voice.selfMute
       ? "<:mute_mys1:769947846496747562>"
       : "<:unmute_mys1:769947930177699841>"
   }
-Mute **casque localement**: ${
+Mute **headphones locally**: ${
     member.voice.selfDeaf
       ? "<:muteCasque_mys1:769948019780354088>"
       : "<:unmuteCasque_mys1:769947990512238613>"
   }
 
-<:SelfVideo_mys1:769948069248106507> Caméra vidéo: ${
+<:SelfVideo_mys1:769948069248106507> Video camera: ${
     member.voice.selfVideo ? emojis.success : emojis.error
   }
-<:screenVideo_mys1:769948531657408523> Stream vidéo: ${
+<:screenVideo_mys1:769948531657408523> Video streaming: ${
     member.voice.streaming ? emojis.success : emojis.error
   }
 `,
-  co: () => `${emojis.voice} Actuellement connecté en salon vocal :`,
+  co: () => `${emojis.voice} Currently connected in voice channel:`,
 };
