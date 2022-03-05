@@ -1,14 +1,14 @@
 const { emojis } = require("../../../../config");
 module.exports = {
-  question3: () => `Quel salon voulez-vous fermer ?`,
+  question3: () => `How do you want to close the channel?`,
   slowmode: (message, time) =>
-    `<:warn_mys:720681790133501962> | Doucement ${
+    `<:warn_mys:720681790133501962> | Slowly ${
       message.author.username
-    }, tu peux refaire cette fonction dans **${Math.ceil(
+    }, you can redo this function in **${Math.ceil(
       (time - Date.now()) / 1000
-    )} secondes !**`,
-  lock: () => `${emojis.success} | Salon verrouillé !`,
+    )} seconds !**`,
+  lock: () => `${emojis.success} | Channel locked!`,
 
-  question4: () => `Quel salon voulez-vous ouvrir ?`,
-  unlock: () => `${emojis.success} | Salon déverrouillé !`,
+  question4: () => `How do you want to open a channel?`,
+  unlock: () => `${emojis.success} | Channel unlocked!`,
 };
