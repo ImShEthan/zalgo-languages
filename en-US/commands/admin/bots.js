@@ -1,9 +1,9 @@
 const { emojis } = require("../../../../config");
 module.exports = {
-  title: (members) => `Liste des bots - (${members})`,
+  title: (members) => `Bots list - (${members})`,
 
   selectMenu: {
-    title: () => `Afficher plus de détails`,
-    firstOption: () => `Afficher les statuts`,
+    title: () => `View more details`,
+    firstOption: () => `View status`,
   },
 };
