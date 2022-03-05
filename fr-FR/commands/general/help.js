@@ -20,8 +20,8 @@ module.exports = {
 \`${prefix}anti-capitals\` ● Empêche l'envoie de messages avec des majuscules.
 \`${prefix}anti-emojis\` ● Empêche l'envoie de messages avec des emojis.
 \`${prefix}anti-links\` ● Empêche l'envoie des liens discord et de liens https.
-\`${prefix}anti-mass-join\` ● mpêche les membres de rejoindre trop vite le serveur.
-\`${prefix}anti-mass-mentions\` ● mpêche l'envoie de messages avec des mentions.
+\`${prefix}anti-mass-join\` ● Empêche les membres de rejoindre trop vite le serveur.
+\`${prefix}anti-mass-mentions\` ● Empêche l'envoie de messages avec des mentions.
 \`${prefix}anti-spam\` ● Configurer l'anti spam.
 \`${prefix}autorole\` ● Ajouter un rôle à un nouveau membre à sa venue.
 \`${prefix}blacklist\` ● Blacklist des membres.
@@ -38,7 +38,7 @@ module.exports = {
 \`${prefix}protect-plugin\` ● Configurer l'anti-raid.
 \`${prefix}react-role\` ● Gérer les réactions-rôles (boutons).
 \`${prefix}setlang\` ● Changer la langue du bot sur ce serveur.
-\`${prefix}setprefix\` ● Changer le prefix du bot sur ce serveur.
+\`${prefix}setprefix\` ● Changer le préfixe du bot sur ce serveur.
 \`${prefix}setup-statut-role\` ● Configurer le rôle à donner si un membre a tel texte dans son statut.
 \`${prefix}setup-temp-voice\` ● Configurer les salons temporaires (vocal).
 \`${prefix}whitelist\` ● Whitelist de l'anti raid.
@@ -80,10 +80,10 @@ module.exports = {
 `,
 
   giveaway: (prefix) => `
-\`${prefix}giveaway-end\` ● Terminer un giveaway.
-\`${prefix}giveaway-list\` ● Liste des giveaways.
-\`${prefix}giveaway-reroll\` ● Re-jouer le giveaway.
-\`${prefix}giveaway\` ● Créer un giveaway.
+\`${prefix}giveaway-end\` ● Terminer un concours.
+\`${prefix}giveaway-list\` ● Liste des concours.
+\`${prefix}giveaway-reroll\` ● Re-jouer le concours.
+\`${prefix}giveaway\` ● Créer un concours.
 `,
 
   invites: (prefix) => `
@@ -114,16 +114,16 @@ module.exports = {
 \`${prefix}warn\` ● Avertir un membre.
 `,
   xp: (prefix) => `
-\`${prefix}addrank-level\` ● Ajouter un rôle à donner si un membre a tel level.
-\`${prefix}leaderboard-level\` ● Voir le top des levels du serveur.
-\`${prefix}rank\` ● Voir son level ou celui d'un membre.
-\`${prefix}ranks-level\` ● Voir tous les rôles à donner si un membre a tel level.
-\`${prefix}removerank-level\` ●  Supprimer un rôle à donner si un membre a tel level.
+\`${prefix}addrank-level\` ● Ajouter un rôle à donner si un membre a tel niveau.
+\`${prefix}leaderboard-level\` ● Voir le top des niveaux du serveur.
+\`${prefix}rank\` ● Voir son niveau ou celui d'un membre.
+\`${prefix}ranks-level\` ● Voir tous les rôles à donner si un membre a tel niveau.
+\`${prefix}removerank-level\` ●  Supprimer un rôle à donner si un membre a tel niveau.
 \`${prefix}reset-card\` ●  Supprimer la configuration de sa carte.
-\`${prefix}reset-server\` ● Supprimer les levels de tous les membres du serveur.
-\`${prefix}restore-server\` ● Remettre les levels de tous les membres du serveur.
+\`${prefix}reset-server\` ● Supprimer les niveaux de tous les membres du serveur.
+\`${prefix}restore-server\` ● Remettre les niveaux de tous les membres du serveur.
 \`${prefix}setup-card\` ● Configurer sa carte de rank.
-\`${prefix}setup-system\` ● Configurer le message, le salon pour dire qu'un membre a atteint un nouveau level.
+\`${prefix}setup-system\` ● Configurer le message et le salon où le message de passage de niveau sera envoyé.
 `,
 
   owner: (prefix) => `
