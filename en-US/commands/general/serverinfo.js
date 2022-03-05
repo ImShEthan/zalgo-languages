@@ -1,12 +1,12 @@
 const { emojis } = require("../../../../config");
 module.exports = {
-  noFoundDesc: () => `Aucune description`,
-  name: () => `${emojis.newGeneral} Nom :`,
-  id: () => `${emojis.newID} ID :`,
-  createdAt: () => `${emojis.poum} Créé le :`,
-  owner: () => `${emojis.newOwner} Owner du serveur :`,
-  ownerNotFound: () => `Owner introuvable !`,
-  boost: () => `${emojis.newBoost} Nombre de boost :`,
+  noFoundDesc: () => `No description`,
+  name: () => `${emojis.newGeneral} Name:`,
+  id: () => `${emojis.newID} ID:`,
+  createdAt: () => `${emojis.poum} Created on:`,
+  owner: () => `${emojis.newOwner} Server owner:`,
+  ownerNotFound: () => `Owner not found!`,
+  boost: () => `${emojis.newBoost} Number of boost(s):`,
   boostDesc: (message) =>
     `\`Boosts: ${
       message.guild.premiumSubscriptionCount
@@ -14,24 +14,24 @@ module.exports = {
       .replace("TIER_1", "1")
       .replace("TIER_2", "2")
       .replace("TIER_3", "3")}\``,
-  region: () => `${emojis.newStats} Region :`,
-  channels: () => `${emojis.text1} Salons :`,
+  region: () => `${emojis.newStats} Region:`,
+  channels: () => `${emojis.text1} Channels:`,
   channelsDesc: (message) =>
-    `**Total:** \`${message.guild.channels.cache.size}\`\n**Textuels:** \`${
+    `**Total:** \`${message.guild.channels.cache.size}\`\n**Text:** \`${
       message.guild.channels.cache.filter((ch) => ch.type === "GUILD_TEXT").size
-    }\`\n**Vocaux:** \`${
+    }\`\n**Voice:** \`${
       message.guild.channels.cache.filter((ch) => ch.type === "GUILD_VOICE")
         .size
-    }\`\n**Catégories:** \`${
+    }\`\n**Categories:** \`${
       message.guild.channels.cache.filter((ch) => ch.type === "GUILD_CATEGORY")
         .size
-    }\`\n\n**Salon afk:** ${
+    }\`\n\n**AFK channel:** ${
       message.guild.afkChannel
         ? message.guild.afkChannel.name +
-          ` **| Après : ${message.guild.afkTimeout} secondes**`
-        : "Aucun salon AFK"
+          ` **| After : ${message.guild.afkTimeout} seconds**`
+        : "No AFK channel"
     }`,
-  members: () => `${emojis.newUsers} Membres :`,
+  members: () => `${emojis.newUsers} Members :`,
   membersDesc: (message) =>
     `**Total:** \`${message.guild.memberCount}\`\n**Users:** \`${
       message.guild.memberCount -
@@ -39,27 +39,27 @@ module.exports = {
     }\`\n**Bots:** \`${
       message.guild.members.cache.filter((m) => m.user.bot).size
     }\``,
-  roles: () => `${emojis.newAdmin} Rôles :`,
+  roles: () => `${emojis.newAdmin} Roles :`,
   emojis: () => `${emojis.newFun} Emojis :`,
   features: () => `${emojis.newConfig} Features :`,
-  featuresSupp: () => `et d'autres ...`,
-  noFeatures: () => `\`Aucune features\``,
+  featuresSupp: () => `and others ...`,
+  noFeatures: () => `\`No features\``,
   others: () =>
-    `${emojis.AnnouncementChannel} Salon Règles & Annonces discord :`,
+    `${emojis.AnnouncementChannel} Rules channels & Discord announcements:`,
   othersDesc: (message) =>
-    `**Règles:** ${
+    `**Rules:** ${
       message.guild.channels.cache.get(message.guild.rulesChannelID)
         ? message.guild.channels.cache.get(message.guild.rulesChannelID)
-        : "Aucun salon"
-    }\n**Annonces discord:** ${
+        : "No channel"
+    }\n**Discord announcements:** ${
       message.guild.channels.cache.get(message.guild.publicUpdatesChannelID)
         ? message.guild.channels.cache.get(message.guild.publicUpdatesChannelID)
-        : "Aucun salon"
+        : "No channel"
     }`,
-  url: () => `${emojis.newEmbed} Lien personnalisé :`,
-  statsVoc: () => `${emojis.voice} Statistiques vocaux :`,
+  url: () => `${emojis.newEmbed} Custom link :`,
+  statsVoc: () => `${emojis.voice} Voice statistics :`,
   desc1: (members, microMute, casqueMute, stream) => `
-<:voice1_mys:740231856636690503> \`En vocal: ${members}\` 
+<:voice1_mys:740231856636690503> \`In voice: ${members}\` 
 <:mute_mys1:769947846496747562> \`${microMute}\`
 <:muteCasque_mys1:769948019780354088> \`${casqueMute}\`
 <:screenVideo_mys1:769948531657408523> \`${stream}\`
@@ -70,5 +70,5 @@ module.exports = {
 <:unmuteCasque_mys1:769947990512238613> \`${casqueUnMute}\`
 <:SelfVideo_mys1:769948069248106507>  \`${video}\`
 `,
-  banner: () => `**Voici la bannière du serveur :**`,
+  banner: () => `**Here is the server banner:**`,
 };
