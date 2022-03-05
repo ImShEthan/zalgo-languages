@@ -1,9 +1,9 @@
 const { emojis } = require("../../../../config");
 module.exports = {
-  noArgs: () => `${emojis.error} | Vous devez entrer un bonus à enlever !`,
-  invalid: () => `${emojis.error} | Veuillez entrer un chiffre valide !`,
+  noArgs: () => `${emojis.error} | You must enter a bonus to remove!`,
+  invalid: () => `${emojis.error} | Please enter a valid number!`,
   memberNotFound: () =>
-    `${emojis.error} | Cet utilisateur n'est pas sur le serveur !`,
+    `${emojis.error} | This user is not on the server!`,
   success: (bonus, member) =>
-    `**${bonus}** invitations bonus ont été enlevées à ${member.user.tag} !`,
+    `**${bonus}** bonus invitations have been removed to ${member.user.tag} !`,
 };
