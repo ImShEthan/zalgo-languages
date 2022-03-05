@@ -1,53 +1,53 @@
 const { emojis } = require("../../../config");
 module.exports = {
   vote: () =>
-    `**Vous aimez Zalgo ?**\nAllez voter pour lui sur Top.gg pour pouvoir accéder à cette commande !\n\nhttps://top.gg/bot/710135804714024962/vote`,
+    `**You like Zalgo ?**\nGo vote for him on Top.gg to get access to this command !\n\nhttps://top.gg/bot/710135804714024962/vote`,
   page: () => `Page`,
   noButton: (prefix) =>
-    `Faites la commande \`${prefix}addbot\` pour avoir les liens du bot !`,
+    `Do the \`${prefix}addbot command \` to get the links of the bot !`,
 
-  next: () => `Page suivante`,
-  previous: () => `Page précédente`,
-  reasonWarns: () => `Trop de warns`,
+  next: () => `Next page`,
+  previous: () => `Previous page`,
+  reasonWarns: () => `Too many warns`,
 
   variables: () => `
-\`\`\`--- Informations sur l'user : ---
+\`\`\`--- User's information : ---
 
-Mention de l'user : {user}
-Id de l'user : {user.id}
-Tag de l'user : {user.tag}
-Nom de l'user : {user.name}
-Date de création de l'user : {user.createdat}
-Date de création de l'user en Unix Timestamp : {user.createdattimestamp}
+Mention of the user : {user}
+Id of the user : {user.id}
+Tag of the user : {user.tag}
+Name of the user : {user.name}
+Creation date of the user account : {user.createdat}
+Creation date of the user account in Unix Timestamp : {user.createdattimestamp}
 
---- Informations sur l'inviteur : ---
+--- Inviter's information : ---
 
 Mention de l'inviteur : {inviter}
-Id de l'inviteur : {inviter.id}
-Tag de l'inviteur : {inviter.tag}
-Nom de l'inviteur : {inviter.name}
-Nombre d'invitations : {inviter.invitations}
+Id of the inviter : {inviter.id}
+Tag of the inviter : {inviter.tag}
+Name of the inviter : {inviter.name}
+Invitation number : {inviter.invitations}
 
---- Informations sur l'invitation : ---
+--- Invitation's information : ---
 
-Code d'invitation : {invite.code}
-Nombre d'utilisation : {invite.uses}
+Invite code : {invite.code}
+Number of use : {invite.uses}
 
---- Informations sur le serveur : ---
+--- Server's information : ---
 
-Membres totaux : {membercount}
-Serveur : {server}\`\`\``,
+Total members : {membercount}
+Server : {server}\`\`\``,
 
-  wait: () => `${emojis.loading} | Veuillez patienter...`,
+  wait: () => `${emojis.loading} | Please wait...`,
   prefix: (prefix) =>
-    `Bonjour! Merci d'utiliser **${prefix}help** pour voir toutes les commandes !`,
+    `Hello! Please use**${prefix}help** for see all command !`,
 
   maintenance: () =>
-    `${emojis.warn} | Le bot est actuellement en maintenance !`,
+    `${emojis.warn} | The bot is currently in maintenance !`,
   slowmode: () =>
-    `${emojis.error} | Veuillez patienter un moment avant de faire une commande !\n***${emojis.warn} Plus vous faites une commande alors que vous êtes en cooldown, plus l'attente de pouvoir faire une nouvelle commande sera longue !***`,
+    `${emojis.error} | Please wait a moment before using a command!\n***${emojis.warn} More you do the command, more the cooldown will be long, more you will have to wait before doing any command !***`,
   slowmode1: () =>
-    `${emojis.error} | Veuillez patienter un moment avant de mentionner le bot !\n***${emojis.warn} Plus vous faites une commande alors que vous êtes en cooldown, plus l'attente de pouvoir faire une nouvelle commande sera longue !***`,
+    `${emojis.error} | Please wait a moment before using a command!\n***${emojis.warn} More you do the command, more the cooldown will be long, more you will have to wait before doing any command !***`,
 
   specialMessages: require("./special-messages.js"),
 };
