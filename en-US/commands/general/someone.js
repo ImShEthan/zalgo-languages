@@ -1,13 +1,13 @@
 const { emojis } = require("../../../../config");
 module.exports = {
   search: (guild) =>
-    `Membre de **${guild.name}** sélectionné lors d'une recherche aléatoire :`,
-  username: () => `Nom d'utilisateur:`,
-  discri: () => `Discriminateur:`,
+    `Member of **${guild.name}** selected in random search:`,
+  username: () => `Username:`,
+  discri: () => `Discriminator:`,
   id: () => `ID:`,
-  createdat: () => `Créé:`,
-  joinedat: () => `Rejoins:`,
-  badges: () => `Badges Discord:`,
-  nobadges: () => `Aucun badge`,
-  again: () => `Nouvelle recherche`,
+  createdat: () => `Created on:`,
+  joinedat: () => `Join:`,
+  badges: () => `Discord Badges:`,
+  nobadges: () => `No badges`,
+  again: () => `New search`,
 };
