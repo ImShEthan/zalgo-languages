@@ -1,11 +1,11 @@
 const { emojis } = require("../../../../config");
 module.exports = {
-  nourl: () => `${emojis.error} | Veuillez indiquer l'url de l'émoji !`,
-  noname: () => `${emojis.error} | Veuillez indiquer le nom de l'émoji !`,
+  nourl: () => `${emojis.error} | Please enter the url of the emoji!`,
+  noname: () => `${emojis.error} | Please enter the name of the emoji!`,
   success: (name, string, emote) =>
-    `${emote} Émoji **${name}** ajouté au serveur ! Chaîne : \`${string}\``,
+    `${emote} Emoji **${name}** added to the server ! \`${string}\``,
   error: () =>
-    `${emojis.error} | Vous n'avez plus de place sur votre serveur !`,
+    `${emojis.error} | You have no more storage on your server!`,
 
-  errorMultiple: () => `Veuillez entrer un emoji !`,
+  errorMultiple: () => `Please enter an emoji!`,
 };
