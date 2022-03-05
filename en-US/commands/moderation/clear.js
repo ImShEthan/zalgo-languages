@@ -1,7 +1,7 @@
 const { emojis } = require("../../../../config");
 module.exports = {
   count: () =>
-    `${emojis.error} | Vous devez préciser un nombre de messages à supprimer !`,
+    `${emojis.error} | You must specify a number of messages to delete!`,
   success: (amount) =>
-    `${emojis.success} | **${--amount}** messages supprimés !`,
+    `${emojis.success} | **${--amount}** messages deleted!`,
 };
