@@ -1,10 +1,10 @@
 const { emojis } = require("../../../../config");
 module.exports = {
   count: () =>
-    `${emojis.error} | Vous devez préciser un nombre de messages à supprimer !`,
-  noMemberFound: () => `${emojis.error} | Veuillez mentionner un membre !`,
+    `${emojis.error} | You must specify a number of messages to delete!`,
+  noMemberFound: () => `${emojis.error} | Please mention a member!`,
   success: (user, amount) =>
-    `${emojis.success} | **${--amount}** messages de **${
+    `${emojis.success} | **${--amount}** messages from **${
       user.tag
-    }** supprimés !`,
+    }** deleted!`,
 };
