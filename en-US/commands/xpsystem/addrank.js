@@ -3,19 +3,19 @@ module.exports = {
   errors: {
     inviteCount: {
       missing: (prefix) =>
-        `${emojis.error} | Vous devez écrire le nombre de levels nécessaires pour obtenir le grade. (Syntaxe : ${prefix}addrank-level nombre @role)`,
+        `${emojis.error} | You must write the number of levels needed to obtain the grade. (Syntax : ${prefix}addrank-level nomber @role)`,
       incorrect: (prefix) =>
-        `${emojis.error} | Vous devez écrire un nombre __**valide**__ de levels nécessaires pour obtenir le grade. (Syntaxe : ${prefix}addrank-level nombre @role)`,
+        `${emojis.error} | You must write a __**valid**__ number of levels needed to obtain the grade. (Syntax : ${prefix}addrank-level nomber @role)`,
       alreadyExists: (prefix, rank, role) =>
-        `${emojis.error} | Il y a déjà un rôle défini pour **${rank.level}** levels (\`@${role.name}\`) ! Retirez-le avec \`${prefix}removerank-level ${role.id}\` puis réessayez !`,
+        `${emojis.error} | There is already a role defined for **${rank.level}** levels (\`@${role.name}\`)! Remove it with \`${prefix}removerank-level ${role.id}\` then try again!`,
     },
     role: {
       missing: (prefix) =>
-        `${emojis.error} | Vous devez mentionner le rôle que vous souhaitez ajouter quand le level est atteint. (Syntaxe : ${prefix}addrank-level nombre @role)`,
+        `${emojis.error} | You must mention the role you want to add when the level is reached. (Syntax : ${prefix}addrank-level nomber @role)`,
       alreadyExists: (prefix, rank, role) =>
-        `${emojis.error} | Ce rôle est déjà utilisé comme récompense pour les **${rank.level}** levels ! Retirez-le avec \`${prefix}removerank-level ${role.id}\` puis réessayez !`,
+        `${emojis.error} | his role is already used as a reward for the **${rank.level}** levels ! Remove it with  \`${prefix}removerank-level ${role.id}\` then try again!`,
       perm: (role) =>
-        `${emojis.error} | Mon rôle n'est pas assez haut pour ajouter le rôle \`@${role.name}\` aux membres ! Veuillez monter mon rôle puis réessayez !`,
+        `${emojis.error} | My role is not high enough to add the role \`@${role.name}\` to member ! Please up my role and try again !`,
     },
   },
 };

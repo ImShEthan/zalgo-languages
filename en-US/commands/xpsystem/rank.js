@@ -1,7 +1,7 @@
 const { emojis } = require("../../../../config");
 module.exports = {
   noHere: () =>
-    `${emojis.error} | Cette personne n'est pas présente sur ce serveur !`,
+    `${emojis.error} | This user is not on the server !`,
   cantCreateImage: (prefix) =>
-    `${emojis.error} | Impossible de créer l'image ! Faites \`${prefix}reset-card\` pour que je puisse créer l'image correctement.`,
+    `${emojis.error} | I can't create the image ! Do \`${prefix}reset-card\` so I can create the image correctly.`,
 };

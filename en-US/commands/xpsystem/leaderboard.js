@@ -1,10 +1,10 @@
 const { emojis } = require("../../../../config");
 module.exports = {
-  wait: () => `${emojis.loading} | Récupération des informations...`,
-  nothingFound: () => `${emojis.error} | Aucun level trouvé !`,
+  wait: () => `${emojis.loading} | Retrieving information...`,
+  nothingFound: () => `${emojis.error} | No level found !`,
   desc: (lb, user, member) =>
-    `${lb} ● **${user.tag}** ● **${member.level}** levels, il reste **${
+    `${lb} ● **${user.tag}** ● **${member.level}** levels, it remains **${
       member.levelxp - member.xp
-    }** xp's pour atteindre le level **${member.level + 1}**.\n`,
-  leaderboard: () => "Classement des levels",
+    }** xp's to reach the level **${member.level + 1}**.\n`,
+  leaderboard: () => "Ranking of the levels",
 };

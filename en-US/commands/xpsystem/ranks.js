@@ -1,8 +1,8 @@
 const { emojis } = require("../../../../config");
 module.exports = {
-  any: () => "Aucun rôle reward",
+  any: () => "No rewards roles",
   desc: (data) =>
-    `Faites \`${data.guild.prefix}addrank-level\` pour configurer un rôle reward.`,
-  list: () => "Liste des rôles reward :",
+    `Do \`${data.guild.prefix}addrank-level\` for configure the rewards roles.`,
+  list: () => "List of reward roles :",
   field: (role, rank) => `${role} ● ${rank.level} levels`,
 };

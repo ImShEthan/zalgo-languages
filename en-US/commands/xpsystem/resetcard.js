@@ -1,4 +1,4 @@
 const { emojis } = require("../../../../config");
 module.exports = {
-  reset: () => "Carte reset !",
+  reset: () => "Reset card !",
 };

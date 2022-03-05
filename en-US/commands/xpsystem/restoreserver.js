@@ -1,5 +1,5 @@
 const { emojis } = require("../../../../config");
 module.exports = {
-  wait: () => `${emojis.loading} | Restauration des levels en cours...`,
-  success: () => `${emojis.success} | Levels restaurés avec succès !`,
+  wait: () => `${emojis.loading} | Restoration of levels in progress...`,
+  success: () => `${emojis.success} | Levels successfully restored !`,
 };

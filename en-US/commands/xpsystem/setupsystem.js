@@ -3,43 +3,43 @@ module.exports = {
   mainEmbedDescription: (
     guildData,
     message
-  ) => `__**Appuyez sur une réaction pour activer/désactiver un paramètre.**__\n\n
-**1)** __Système d'xp :__\n${
+  ) => `__**Press a reaction to activate/deactivate a parameter.**__\n\n
+**1)** __Xp system :__\n${
     guildData.enabled
-      ? `${emojis.enabled} Activé`
-      : `${emojis.disabled} Désactivé`
+      ? `${emojis.enabled} Activated`
+      : `${emojis.disabled} Off`
   }
 
-**2)** __Salon :__\n${
+**2)** __Channel :__\n${
     guildData.channel
-      ? `${emojis.enabled} Activé\n<#${
+      ? `${emojis.enabled} Activated\n<#${
           message.guild.channels.cache.get(guildData.channel)
             ? message.guild.channels.cache.get(guildData.channel).id
-            : "Salon introuvable !"
+            : "Channel not found !"
         }>`
-      : `${emojis.disabled} Désactivé`
+      : `${emojis.disabled} Activated`
   }
 
 **3)** __Message :__\n${
     guildData.message
-      ? `${emojis.enabled} Activé\n\`\`\`${guildData.message}\`\`\``
-      : `${emojis.disabled} Désactivé`
+      ? `${emojis.enabled} Activated\n\`\`\`${guildData.message}\`\`\``
+      : `${emojis.disabled} Off`
   }
 
-**4)** *Pour reset le message de level*
+**4)** *To reset the level message*
 
-**5)** Les boosters ont un bonus d'xp ? ${
-    guildData.boosterxp ? "Oui: x" + guildData.boosterxp : "Non"
+**5)** Do boosters have an xp bonus? ${
+    guildData.boosterxp ? "Yes: x" + guildData.boosterxp : "No"
   }
 
-**6)** Xp multiplié par :\n${guildData.xpmultiplicator}
+**6)** Xp multiplied by :\n${guildData.xpmultiplicator}
           `,
   channel: () =>
-    "Veuillez mentionner le salon pour envoyer les messages de level !",
+    "Please mention the salon when sending level messages!",
   msg: () =>
-    "Envoyez le message que vous voulez pour les messages de level !\n\n```INFOS :\n\n{author} : Mention de l'auteur du message.\n{author.tag} : Tag de l'auteur du message.\n{author.name} : Nom de l'auteur du message.\n{author.id} : ID de l'auteur du message.\n{author.createdat} : Création du compte de l'auteur du message.\n{author.createdattimestamp} : Création du compte de l'auteur du message en Unix Timestamp.\n{level} : Nouveau level de la personne.\n{levelxp} : XP jusqu'au prochain level.\n{allxp} : XP total de la personne.```",
-  tooChars: () => "Vous avez trop de caracteres dans votre message !",
-  success: () => "Bravo {author}, tu es maintenant niveau **{level}** !",
-  multiplicator: () => "Veuillez envoyer le multiplicateur ! (ex: 2)",
-  invalidInt: () => `${emojis.error} | Envoyez un chiffre valide !`,
+    "Send the message you want for the level messages !\n\n```INFOS :\n\n{author} :Mention of the author of the message.\n{author.tag} : Tag of the author of the message.\n{author.name} : Name of the author of the message.\n{author.id} : ID of the author of the message.\n{author.createdat} : Account creation of the author of the message.\n{author.createdattimestamp} : Account creation of the author of the message in Unix Timestamp.\n{level} : New level of the user.\n{levelxp} : XP to the next level.\n{allxp} : Total XP of the user.```",
+  tooChars: () => "You have too many characters in your message !",
+  success: () => "Bravo {author}, you are now **{level}**!",
+  multiplicator: () => "Please send the multiplier! (ex: 2)",
+  invalidInt: () => `${emojis.error} | Send a valid number !`,
 };
