@@ -1,24 +1,24 @@
 const { emojis } = require("../../../../config");
 module.exports = {
   title: () => `🚩 Auto Sanctions`,
-  anySanctions: () => `Il n'y a aucune auto sanctions configurée`,
+  anySanctions: () => `There are no auto sanctions configured`,
 
   questionDelete: () =>
-    `Veuillez entrer l'id de la sanction que vous voulez supprimer \n \nTappez \`cancel\` pour annuler.`,
+    `Please enter the ID of the sanction you want to delete \n \nType \`cancel\` to cancel.`,
   question1: () =>
-    `Quel est la sanction que vous souhaitez ? (Dites "1", "2" ou "3") \n\n1 = Mute \n2 = Kick\n3 = Ban \n \nTappez \`cancel\` pour annuler.`,
+    `What is the sanction you want? (Say "1", "2" ou "3") \n\n1 = Mute \n2 = Kick\n3 = Ban \n \nType \`cancel\` to cancel.`,
   question2: () =>
-    `Au bout de combien d'avertissement cette sanction tombera ? \n \nTappez \`cancel\` pour annuler.`,
+    `After how many warnings will this sanction be applied? \n \nType \`cancel\` to cancel.`,
   question3: (s) =>
-    `Combien de temps maximum entre les ${s} warns ? (10m maximum pour ${s})\n \nTappez \`cancel\` pour annuler.`,
+    `What is the maximum time between ${s} warns? (10m maximum for ${s})\n \nType \`cancel\` to cancel.`,
   question4: () =>
-    `Quelle va être la durée de la sanction ? \n \nTappez \`cancel\` pour annuler.`,
+    `How long will the sanction last? \n \nType \`cancel\` to cancel.`,
 
-  cancel: () => `${emojis.error} | Annulé.`,
-  btw14: () => `Veuillez enter un chiffre compris entre 1 et 3 !`,
-  notValid: () => `Veuillez entrer un chiffre !`,
+  cancel: () => `${emojis.error} | Cancelled.`,
+  btw14: () => `Please enter a number between 1 and 3!`,
+  notValid: () => `Please enter a number!`,
   notValidDate: () =>
-    "Date invalide. Veuillez utiliser comme unité : `d`, `y`, `m`, `s`",
-  IDInvalid: () => `L'identifiant spécifié est invalide !`,
-  tomany: () => `Vous ne pouvez pas créer plus de 15 sanctions automatiques !`,
+    "Invalid date. Please use as unit : `d`, `y`, `m`, `s`",
+  IDInvalid: () => `The specified ID is invalid!`,
+  tomany: () => `You can't create more than 15 automatic sanctions!`,
 };
