@@ -1,299 +1,299 @@
 const { emojis } = require("../../../config");
 module.exports = {
-  createdAt: (date) => `Compte créé le ${date}`,
+  createdAt: (date) => `Account created the ${date}`,
 
   reasons: {
-    channelCreate: () => `Anti raid | Trop de salons créés`,
-    channelDelete: () => `Anti raid | Trop de salons supprimés`,
-    guildBanAdd: () => `Anti raid | Trop de membres banni`,
-    guildBanRemove: () => `Anti raid | Trop de d'unbans`,
-    guildMemberAdd: () => `Anti raid | Trop de bots ajoutés`,
-    guildMemberRoleAdd: () => `Anti raid | Trop de grosses permissions données`,
-    guildUpdate: () => `Anti raid | Changement de l'url trop de fois`,
-    roleCreate: () => `Anti raid | Trop de rôles créés`,
-    roleDelete: () => `Anti raid | Trop de rôles supprimés`,
-    roleUpdate: () => `Anti raid | Trop de permissions de rôles changés`,
-    webhookUpdate: () => `Anti raid | Trop de webhooks créés`,
+    channelCreate: () => `Anti raid | Too many salons created`,
+    channelDelete: () => `Anti raid | Too many salons deleted`,
+    guildBanAdd: () => `Anti raid | Too many members banned`,
+    guildBanRemove: () => `Anti raid | oo many members unbanned`,
+    guildMemberAdd: () => `Anti raid | Too many bots added`,
+    guildMemberRoleAdd: () => `Anti raid | Too many big permissions given`,
+    guildUpdate: () => `Anti raid | Change the url too many times`,
+    roleCreate: () => `Anti raid | Too many roles created`,
+    roleDelete: () => `Anti raid | Too many roles deleted`,
+    roleUpdate: () => `Anti raid | Too many role permissions changed`,
+    webhookUpdate: () => `Anti raid | Too many webhooks created`,
     onlyVerif: () =>
-      "Les bots non certifiés ne sont pas acceptés sur ce serveur !",
-    botNotAllowed: () => "Les bots ne sont pas acceptés sur ce serveur !",
+      "Uncertified bots are not allowed on this server !",
+    botNotAllowed: () => "Bots are not allowed on this server !",
   },
 
   channelCreate: {
     desc: (userAction, channel, catégorie) =>
-      `${userAction} (${userAction.tag}) a créé le salon ${channel} (${
+      `${userAction} (${userAction.tag}) has created the channel ${channel} (${
         channel.name
       }) ${
         catégorie
-          ? `se trouvant dans la catégorie **${catégorie.name}**.`
-          : "se trouvant dans aucune catégorie."
-      }.\n\n${emojis.success} **J'ai réussi à le dérank.**`,
+          ? `in the category **${catégorie.name}**.`
+          : "is not in any category."
+      }.\n\n${emojis.success} **I managed to unrank it.**`,
     desc2: (userAction, channel, catégorie) =>
-      `${userAction} (${userAction.tag}) a créé le salon ${channel} (${
+      `${userAction} (${userAction.tag}) has created the channel ${channel} (${
         channel.name
       }) ${
         catégorie
-          ? `se trouvant dans la catégorie **${catégorie.name}**.`
-          : "se trouvant dans aucune catégorie."
-      }.\n\n${emojis.error} **Je n'ai pas réussi à le dérank.**`,
+          ? `in the category **${catégorie.name}**.`
+          : "is not in any category."
+      }.\n\n${emojis.error} **I was unable to unrank him.**`,
     desc3: (userAction, channel, catégorie) =>
-      `${userAction} (${userAction.tag}) a créé le salon ${channel} (${
+      `${userAction} (${userAction.tag}) has created the channel ${channel} (${
         channel.name
       }) ${
         catégorie
-          ? `se trouvant dans la catégorie **${catégorie.name}**.`
-          : "se trouvant dans aucune catégorie."
-      }.\n\n${emojis.success} **J'ai réussi à le kick.**`,
+          ? `in the category **${catégorie.name}**.`
+          : "is not in any category."
+      }.\n\n${emojis.success} **I managed to kick it.**`,
     desc4: (userAction, channel, catégorie) =>
-      `${userAction} (${userAction.tag}) a créé le salon ${channel} (${
+      `${userAction} (${userAction.tag}) has created the channel ${channel} (${
         channel.name
       }) ${
         catégorie
-          ? `se trouvant dans la catégorie **${catégorie.name}**.`
-          : "se trouvant dans aucune catégorie."
-      }.\n\n${emojis.error} **Je n'ai pas réussi à le kick.**`,
+          ? `in the category **${catégorie.name}**.`
+          : "is not in any category."
+      }.\n\n${emojis.error} **I was unable to kick him.**`,
     desc5: (userAction, channel, catégorie) =>
-      `${userAction} (${userAction.tag}) a créé le salon ${channel} (${
+      `${userAction} (${userAction.tag}) has created the channel ${channel} (${
         channel.name
       }) ${
         catégorie
-          ? `se trouvant dans la catégorie **${catégorie.name}**.`
-          : "se trouvant dans aucune catégorie."
-      }.\n\n${emojis.success} **J'ai réussi à le ban.**`,
+          ? `in the category **${catégorie.name}**.`
+          : "is not in any category."
+      }.\n\n${emojis.success} **I managed to ban him.**`,
     desc6: (userAction, channel, catégorie) =>
-      `${userAction} (${userAction.tag}) a créé le salon ${channel} (${
+      `${userAction} (${userAction.tag}) has created the channel ${channel} (${
         channel.name
       }) ${
         catégorie
-          ? `se trouvant dans la catégorie **${catégorie.name}**.`
-          : "se trouvant dans aucune catégorie."
-      }.\n\n${emojis.error} **Je n'ai pas réussi à le ban.**`,
+          ? `in the category **${catégorie.name}**.`
+          : "is not in any category."
+      }.\n\n${emojis.error} **I was unable to ban him**`,
 
     noFound: (channel, catégorie) =>
       `Le salon ${channel} a été créé, ${
         catégorie
-          ? `se trouvant dans la catégorie ${catégorie.name}.`
-          : "se trouvant dans aucune catégorie."
-      } **mais je ne sais pas qui l'a créé.**\n\n**Pour plus de sécurité, j'ai quand même supprimé le salon !**`,
+          ? `in the category ${catégorie.name}.`
+          : "is not in any category."
+      } **but I don't know who created it. For safety's sake, I deleted the lounge anyway!**`,
   },
 
   channelDelete: {
     desc: (userAction, channel, catégorie) =>
-      `${userAction} (${userAction.tag}) a supprimé le salon ${channel} (${
+      `${userAction} (${userAction.tag}) deleted the channel ${channel} (${
         channel.name
       }) ${
         catégorie
-          ? `se trouvant dans la catégorie **${catégorie.name}**.`
-          : "se trouvant dans aucune catégorie."
-      }.\n\n${emojis.success} **J'ai réussi à le dérank.**`,
+          ? `in the category **${catégorie.name}**.`
+          : "is not in any category."
+      }.\n\n${emojis.success} **I managed to unrank it.**`,
     desc2: (userAction, channel, catégorie) =>
-      `${userAction} (${userAction.tag}) a supprimé le salon ${channel} (${
+      `${userAction} (${userAction.tag}) deleted the channel ${channel} (${
         channel.name
       }) ${
         catégorie
-          ? `se trouvant dans la catégorie **${catégorie.name}**.`
-          : "se trouvant dans aucune catégorie."
-      }.\n\n${emojis.error} **Je n'ai pas réussi à le dérank.**`,
+          ? `in the category **${catégorie.name}**.`
+          : "is not in any category."
+      }.\n\n${emojis.error} **I was unable to unrank him.**`,
     desc3: (userAction, channel, catégorie) =>
-      `${userAction} (${userAction.tag}) a supprimé le salon ${channel} (${
+      `${userAction} (${userAction.tag}) deleted the channel ${channel} (${
         channel.name
       }) ${
         catégorie
-          ? `se trouvant dans la catégorie **${catégorie.name}**.`
-          : "se trouvant dans aucune catégorie."
-      }.\n\n${emojis.success} **J'ai réussi à le kick.**`,
+          ? `in the category **${catégorie.name}**.`
+          : "is not in any category."
+      }.\n\n${emojis.success} **I managed to kick it.**`,
     desc4: (userAction, channel, catégorie) =>
-      `${userAction} (${userAction.tag}) a supprimé le salon ${channel} (${
+      `${userAction} (${userAction.tag}) deleted the channel ${channel} (${
         channel.name
       }) ${
         catégorie
-          ? `se trouvant dans la catégorie **${catégorie.name}**.`
-          : "se trouvant dans aucune catégorie."
-      }.\n\n${emojis.error} **Je n'ai pas réussi à le kick.**`,
+          ? `in the category **${catégorie.name}**.`
+          : "is not in any category."
+      }.\n\n${emojis.error} **I was unable to kick him.**`,
     desc5: (userAction, channel, catégorie) =>
-      `${userAction} (${userAction.tag}) a supprimé le salon ${channel} (${
+      `${userAction} (${userAction.tag}) deleted the channel ${channel} (${
         channel.name
       }) ${
         catégorie
-          ? `se trouvant dans la catégorie **${catégorie.name}**.`
-          : "se trouvant dans aucune catégorie."
-      }.\n\n${emojis.success} **J'ai réussi à le ban.**`,
+          ? `in the category **${catégorie.name}**.`
+          : "is not in any category."
+      }.\n\n${emojis.success} **I managed to ban him.**`,
     desc6: (userAction, channel, catégorie) =>
-      `${userAction} (${userAction.tag}) a supprimé le salon ${channel} (${
+      `${userAction} (${userAction.tag}) deleted the channel ${channel} (${
         channel.name
       }) ${
         catégorie
-          ? `se trouvant dans la catégorie **${catégorie.name}**.`
-          : "se trouvant dans aucune catégorie."
-      }.\n\n${emojis.error} **Je n'ai pas réussi à le ban.**`,
+          ? `in the category **${catégorie.name}**.`
+          : "is not in any category."
+      }.\n\n${emojis.error} **I was unable to ban him.**`,
 
     noFound: (channel, catégorie) =>
       `Le salon ${channel} a été supprimé, ${
         catégorie
-          ? `se trouvant dans la catégorie ${catégorie.name}.`
-          : "se trouvant dans aucune catégorie."
-      } **mais je ne sais pas qui l'a supprimé.**`,
+          ? `in the category ${catégorie.name}.`
+          : "is not in any category."
+      } **but I don't know who deleted it.**`,
   },
 
   guildBanAdd: {
     desc: (userAction, user) =>
-      `${userAction} (${userAction.tag}) a banni ${user.tag} (${user.id}).\n\n${emojis.success} **J'ai réussi à le dérank.**`,
+      `${userAction} (${userAction.tag}) banned ${user.tag} (${user.id}).\n\n${emojis.success} **I managed to unrank it.**`,
     desc2: (userAction, user) =>
-      `${userAction} (${userAction.tag}) a banni ${user.tag} (${user.id}).\n\n${emojis.error} **Je n'ai pas réussi à le dérank.**`,
+      `${userAction} (${userAction.tag}) banned ${user.tag} (${user.id}).\n\n${emojis.error} **I was unable to unrank him.**`,
     desc3: (userAction, user) =>
-      `${userAction} (${userAction.tag}) a banni ${user.tag} (${user.id}).\n\n${emojis.success} **J'ai réussi à le kick.**`,
+      `${userAction} (${userAction.tag}) banned ${user.tag} (${user.id}).\n\n${emojis.success} **I managed to kick it.**`,
     desc4: (userAction, user) =>
-      `${userAction} (${userAction.tag}) a banni ${user.tag} (${user.id}).\n\n${emojis.error} **Je n'ai pas réussi à le kick.**`,
+      `${userAction} (${userAction.tag}) banned ${user.tag} (${user.id}).\n\n${emojis.error} **I was unable to kick him.**`,
     desc5: (userAction, user) =>
-      `${userAction} (${userAction.tag}) a banni ${user.tag} (${user.id}).\n\n${emojis.success} **J'ai réussi à le ban.**`,
+      `${userAction} (${userAction.tag}) banned ${user.tag} (${user.id}).\n\n${emojis.success} **I managed to ban him.**`,
     desc6: (userAction, user) =>
-      `${userAction} (${userAction.tag}) a banni ${user.tag} (${user.id}).\n\n${emojis.error} **Je n'ai pas réussi à le ban.**`,
+      `${userAction} (${userAction.tag}) banned ${user.tag} (${user.id}).\n\n${emojis.error} **I was unable to ban him.**`,
 
     noFound: (user) =>
-      `${user.tag} (${user.id}) a été banni **mais je ne sais pas qui l'a ban.**`,
+      `${user.tag} (${user.id}) have been ban **but I don't know who ban'd him**`,
   },
 
   guildBanRemove: {
     desc: (userAction, user) =>
-      `${userAction} (${userAction.tag}) a unban ${user.tag} (${user.id}).\n\n${emojis.success} **J'ai réussi à le dérank.**`,
+      `${userAction} (${userAction.tag}) unbanned ${user.tag} (${user.id}).\n\n${emojis.success} **I managed to unrank it.**`,
     desc2: (userAction, user) =>
-      `${userAction} (${userAction.tag}) a unban ${user.tag} (${user.id}).\n\n${emojis.error} **Je n'ai pas réussi à le dérank.**`,
+      `${userAction} (${userAction.tag}) unbanned ${user.tag} (${user.id}).\n\n${emojis.error} **I was unable to unrank him.**`,
     desc3: (userAction, user) =>
-      `${userAction} (${userAction.tag}) a unban ${user.tag} (${user.id}).\n\n${emojis.success} **J'ai réussi à le kick.**`,
+      `${userAction} (${userAction.tag}) unbanned ${user.tag} (${user.id}).\n\n${emojis.success} **I managed to kick it.**`,
     desc4: (userAction, user) =>
-      `${userAction} (${userAction.tag}) a unban ${user.tag} (${user.id}).\n\n${emojis.error} **Je n'ai pas réussi à le kick.**`,
+      `${userAction} (${userAction.tag}) unbanned ${user.tag} (${user.id}).\n\n${emojis.error} **I was unable to kick him.**`,
     desc5: (userAction, user) =>
-      `${userAction} (${userAction.tag}) a unban ${user.tag} (${user.id}).\n\n${emojis.success} **J'ai réussi à le ban.**`,
+      `${userAction} (${userAction.tag}) unbanned ${user.tag} (${user.id}).\n\n${emojis.success} **I managed to ban him.**`,
     desc6: (userAction, user) =>
-      `${userAction} (${userAction.tag}) a unban ${user.tag} (${user.id}).\n\n${emojis.error} **Je n'ai pas réussi à le ban.**`,
+      `${userAction} (${userAction.tag}) unbanned ${user.tag} (${user.id}).\n\n${emojis.error} **I was unable to ban him.**`,
 
     noFound: (user) =>
-      `${user.tag} (${user.id}) a été unban **mais je ne sais pas qui l'a unban.**`,
+      `${user.tag} (${user.id}) have been unban **but I don't know who unban'd him**`,
   },
 
   guildMemberRoleAdd: {
     desc: (userAction, role, member) =>
-      `${userAction} (${userAction.tag}) a ajouté le rôle ${role} qui contient une grosse permission à ${member} (${member.id}).\n\n${emojis.success} **J'ai réussi à le dérank.**`,
+      `${userAction} (${userAction.tag}) added the role ${role} qui contient une grosse permission à ${member} (${member.id}).\n\n${emojis.success} **I managed to unrank it.**`,
     desc2: (userAction, role, member) =>
-      `${userAction} (${userAction.tag}) a ajouté le rôle ${role} qui contient une grosse permission à ${member} (${member.id}).\n\n${emojis.error} **Je n'ai pas réussi à le dérank.**`,
+      `${userAction} (${userAction.tag}) added the role ${role} qui contient une grosse permission à ${member} (${member.id}).\n\n${emojis.error} **I was unable to unrank him.**`,
     desc3: (userAction, role, member) =>
-      `${userAction} (${userAction.tag}) a ajouté le rôle ${role} qui contient une grosse permission à ${member} (${member.id}).\n\n${emojis.success} **J'ai réussi à le kick.**`,
+      `${userAction} (${userAction.tag}) added the role ${role} qui contient une grosse permission à ${member} (${member.id}).\n\n${emojis.success} **I managed to kick it.**`,
     desc4: (userAction, role, member) =>
-      `${userAction} (${userAction.tag}) a ajouté le rôle ${role} qui contient une grosse permission à ${member} (${member.id}).\n\n${emojis.error} **Je n'ai pas réussi à le kick.**`,
+      `${userAction} (${userAction.tag}) added the role ${role} qui contient une grosse permission à ${member} (${member.id}).\n\n${emojis.error} **I was unable to kick him.**`,
     desc5: (userAction, role, member) =>
-      `${userAction} (${userAction.tag}) a ajouté le rôle ${role} qui contient une grosse permission à ${member} (${member.id}).\n\n${emojis.success} **J'ai réussi à le ban.**`,
+      `${userAction} (${userAction.tag}) added the role ${role} qui contient une grosse permission à ${member} (${member.id}).\n\n${emojis.success} **I managed to ban him.**`,
     desc6: (userAction, role, member) =>
-      `${userAction} (${userAction.tag}) a ajouté le rôle ${role} qui contient une grosse permission à ${member} (${member.id}).\n\n${emojis.error} **Je n'ai pas réussi à le ban.**`,
+      `${userAction} (${userAction.tag}) added the role ${role} qui contient une grosse permission à ${member} (${member.id}).\n\n${emojis.error} **I was unable to ban him.**`,
 
     noFound: (role, member) =>
-      `Le role ${role} qui contient une grosse permission à été ajouté à ${member} (${member.id}) **mais je ne sais pas qui l'a ajouté.**`,
+      `The role ${role} which contains a big permission has been added to ${member} (${member.id}) **but I don't know who added it.**`,
   },
 
   guildMemberAdd: {
     desc: (userAction, member) =>
-      `${userAction} (${userAction.tag}) a ajouté le bot ${member.user.tag} (${member.user.tag}).\n\n${emojis.success} **J'ai réussi à le dérank.**`,
+      `${userAction} (${userAction.tag}) added the bot ${member.user.tag} (${member.user.tag}).\n\n${emojis.success} **I managed to unrank it.**`,
     desc2: (userAction, member) =>
-      `${userAction} (${userAction.tag}) a ajouté le bot ${member.user.tag} (${member.user.tag}).\n\n${emojis.error} **Je n'ai pas réussi à le dérank.**`,
+      `${userAction} (${userAction.tag}) added the bot ${member.user.tag} (${member.user.tag}).\n\n${emojis.error} **I was unable to unrank him.**`,
     desc3: (userAction, member) =>
-      `${userAction} (${userAction.tag}) a ajouté le bot ${member.user.tag} (${member.user.tag}).\n\n${emojis.success} **J'ai réussi à le kick.**`,
+      `${userAction} (${userAction.tag}) added the bot ${member.user.tag} (${member.user.tag}).\n\n${emojis.success} **I managed to kick it.**`,
     desc4: (userAction, member) =>
-      `${userAction} (${userAction.tag}) a ajouté le bot ${member.user.tag} (${member.user.tag}).\n\n${emojis.error} **Je n'ai pas réussi à le kick.**`,
+      `${userAction} (${userAction.tag}) added the bot ${member.user.tag} (${member.user.tag}).\n\n${emojis.error} **I was unable to kick him.**`,
     desc5: (userAction, member) =>
-      `${userAction} (${userAction.tag}) a ajouté le bot ${member.user.tag} (${member.user.tag}).\n\n${emojis.success} **J'ai réussi à le ban.**`,
+      `${userAction} (${userAction.tag}) added the bot ${member.user.tag} (${member.user.tag}).\n\n${emojis.success} **I managed to ban him.**`,
     desc6: (userAction, member) =>
-      `${userAction} (${userAction.tag}) a ajouté le bot ${member.user.tag} (${member.user.tag}).\n\n${emojis.error} **Je n'ai pas réussi à le ban.**`,
+      `${userAction} (${userAction.tag}) added the bot ${member.user.tag} (${member.user.tag}).\n\n${emojis.error} **I was unable to ban him.**`,
 
     noFound: (member) =>
-      `Le bot ${member.user.tag} (${member.user.tag}) a rejoins le serveur **mais je ne sais pas qui l'a ajouté.**`,
+      `The bot ${member.user.tag} (${member.user.tag}) has joined the server **but I don't know who added it.**`,
   },
 
   guildUpdate: {
     desc: (userAction) =>
-      `${userAction} (${userAction.tag}) a modifié l'url perso du serveur.\n\n${emojis.success} **J'ai réussi à le dérank.**`,
+      `${userAction} (${userAction.tag}) modified the server's personal url.\n\n${emojis.success} **I managed to unrank it.**`,
     desc2: (userAction) =>
-      `${userAction} (${userAction.tag}) a modifié l'url perso du serveur.\n\n${emojis.error} **Je n'ai pas réussi à le dérank.**`,
+      `${userAction} (${userAction.tag}) modified the server's personal url.\n\n${emojis.error} **I was unable to unrank him.**`,
     desc3: (userAction) =>
-      `${userAction} (${userAction.tag}) a modifié l'url perso du serveur.\n\n${emojis.success} **J'ai réussi à le kick.**`,
+      `${userAction} (${userAction.tag}) modified the server's personal url.\n\n${emojis.success} **I managed to kick it.**`,
     desc4: (userAction) =>
-      `${userAction} (${userAction.tag}) a modifié l'url perso du serveur.\n\n${emojis.error} **Je n'ai pas réussi à le kick.**`,
+      `${userAction} (${userAction.tag}) modified the server's personal url.\n\n${emojis.error} **I was unable to kick him.**`,
     desc5: (userAction) =>
-      `${userAction} (${userAction.tag}) a modifié l'url perso du serveur.\n\n${emojis.success} **J'ai réussi à le ban.**`,
+      `${userAction} (${userAction.tag}) modified the server's personal url.\n\n${emojis.success} **I managed to ban him.**`,
     desc6: (userAction) =>
-      `${userAction} (${userAction.tag}) a modifié l'url perso du serveur.\n\n${emojis.error} **Je n'ai pas réussi à le ban.**`,
+      `${userAction} (${userAction.tag}) modified the server's personal url.\n\n${emojis.error} **I was unable to ban him.**`,
 
     noFound: () =>
-      `L'url perso du serveur a été modifié **mais je ne sais pas qui l'a modifié.**`,
+      `The personal url of the server has been modified **but I don't know who modified it.**`,
   },
 
   roleCreate: {
     desc: (userAction, role) =>
-      `${userAction} (${userAction.tag}) a créé le rôle ${role} (${role.name}).\n\n${emojis.success} **J'ai réussi à le dérank.**`,
+      `${userAction} (${userAction.tag}) created the role ${role} (${role.name}).\n\n${emojis.success} **I managed to unrank it.**`,
     desc2: (userAction, role) =>
-      `${userAction} (${userAction.tag}) a créé le rôle ${role} (${role.name}).\n\n${emojis.error} **Je n'ai pas réussi à le dérank.**`,
+      `${userAction} (${userAction.tag}) created the role ${role} (${role.name}).\n\n${emojis.error} **I was unable to unrank him.**`,
     desc3: (userAction, role) =>
-      `${userAction} (${userAction.tag}) a créé le rôle ${role} (${role.name}).\n\n${emojis.success} **J'ai réussi à le kick.**`,
+      `${userAction} (${userAction.tag}) created the role ${role} (${role.name}).\n\n${emojis.success} **I managed to kick it.**`,
     desc4: (userAction, role) =>
-      `${userAction} (${userAction.tag}) a créé le rôle ${role} (${role.name}).\n\n${emojis.error} **Je n'ai pas réussi à le kick.**`,
+      `${userAction} (${userAction.tag}) created the role ${role} (${role.name}).\n\n${emojis.error} **I was unable to kick him.**`,
     desc5: (userAction, role) =>
-      `${userAction} (${userAction.tag}) a créé le rôle ${role} (${role.name}).\n\n${emojis.success} **J'ai réussi à le ban.**`,
+      `${userAction} (${userAction.tag}) created the role ${role} (${role.name}).\n\n${emojis.success} **I managed to ban him.**`,
     desc6: (userAction, role) =>
-      `${userAction} (${userAction.tag}) a créé le rôle ${role} (${role.name}).\n\n${emojis.error} **Je n'ai pas réussi à le ban.**`,
+      `${userAction} (${userAction.tag}) created the role ${role} (${role.name}).\n\n${emojis.error} **I was unable to ban him.**`,
 
     noFound: (role) =>
-      `Le rôle ${role} a été créé **mais je ne sais pas qui l'a créé.**\n\n**Pour plus de sécurité, j'ai quand même supprimé le rôle !**`,
+      `The role ${role} has been created **But I don't know who created it. For safety's sake, I deleted the role anyway.**`,
   },
 
   roleDelete: {
     desc: (userAction, role) =>
-      `${userAction} (${userAction.tag}) a supprimé le rôle ${role} (${role.name}).\n\n${emojis.success} **J'ai réussi à le dérank.**`,
+      `${userAction} (${userAction.tag}) deleted the role ${role} (${role.name}).\n\n${emojis.success} **I managed to unrank it.**`,
     desc2: (userAction, role) =>
-      `${userAction} (${userAction.tag}) a supprimé le rôle ${role} (${role.name}).\n\n${emojis.error} **Je n'ai pas réussi à le dérank.**`,
+      `${userAction} (${userAction.tag}) deleted the role ${role} (${role.name}).\n\n${emojis.error} **I was unable to unrank him.**`,
     desc3: (userAction, role) =>
-      `${userAction} (${userAction.tag}) a supprimé le rôle ${role} (${role.name}).\n\n${emojis.success} **J'ai réussi à le kick.**`,
+      `${userAction} (${userAction.tag}) deleted the role ${role} (${role.name}).\n\n${emojis.success} **I managed to kick it.**`,
     desc4: (userAction, role) =>
-      `${userAction} (${userAction.tag}) a supprimé le rôle ${role} (${role.name}).\n\n${emojis.error} **Je n'ai pas réussi à le kick.**`,
+      `${userAction} (${userAction.tag}) deleted the role ${role} (${role.name}).\n\n${emojis.error} **I was unable to kick him.**`,
     desc5: (userAction, role) =>
-      `${userAction} (${userAction.tag}) a supprimé le rôle ${role} (${role.name}).\n\n${emojis.success} **J'ai réussi à le ban.**`,
+      `${userAction} (${userAction.tag}) deleted the role ${role} (${role.name}).\n\n${emojis.success} **I managed to ban him.**`,
     desc6: (userAction, role) =>
-      `${userAction} (${userAction.tag}) a supprimé le rôle ${role} (${role.name}).\n\n${emojis.error} **Je n'ai pas réussi à le ban.**`,
+      `${userAction} (${userAction.tag}) deleted the role ${role} (${role.name}).\n\n${emojis.error} **I was unable to ban him.**`,
 
     noFound: (role) =>
-      `Le rôle ${role.name} a été supprimé **mais je ne sais pas qui l'a supprimé.**`,
+      `The role ${role.name} has been deleted **but I don't know who deleted it`,
   },
 
   roleUpdate: {
     desc: (userAction, newRole) =>
-      `${userAction} (${userAction.tag}) a changé les permissions du rôle ${newRole} (${newRole.name}).\n\n${emojis.success} **J'ai réussi à le dérank.**`,
+      `${userAction} (${userAction.tag}) changed the permissions of the role ${newRole} (${newRole.name}).\n\n${emojis.success} **I managed to unrank it.**`,
     desc2: (userAction, newRole) =>
-      `${userAction} (${userAction.tag}) a changé les permissions du rôle ${newRole} (${newRole.name}).\n\n${emojis.error} **Je n'ai pas réussi à le dérank.**`,
+      `${userAction} (${userAction.tag}) changed the permissions of the role ${newRole} (${newRole.name}).\n\n${emojis.error} **I was unable to unrank him.**`,
     desc3: (userAction, newRole) =>
-      `${userAction} (${userAction.tag}) a changé les permissions du rôle ${newRole} (${newRole.name}).\n\n${emojis.success} **J'ai réussi à le kick.**`,
+      `${userAction} (${userAction.tag}) changed the permissions of the role ${newRole} (${newRole.name}).\n\n${emojis.success} **I managed to kick it.**`,
     desc4: (userAction, newRole) =>
-      `${userAction} (${userAction.tag}) a changé les permissions du rôle ${newRole} (${newRole.name}).\n\n${emojis.error} **Je n'ai pas réussi à le kick.**`,
+      `${userAction} (${userAction.tag}) changed the permissions of the role ${newRole} (${newRole.name}).\n\n${emojis.error} **I was unable to kick him.**`,
     desc5: (userAction, newRole) =>
-      `${userAction} (${userAction.tag}) a changé les permissions du rôle ${newRole} (${newRole.name}).\n\n${emojis.success} **J'ai réussi à le ban.**`,
+      `${userAction} (${userAction.tag}) changed the permissions of the role ${newRole} (${newRole.name}).\n\n${emojis.success} **I managed to ban him.**`,
     desc6: (userAction, newRole) =>
-      `${userAction} (${userAction.tag}) a changé les permissions du rôle ${newRole} (${newRole.name}).\n\n${emojis.error} **Je n'ai pas réussi à le ban.**`,
+      `${userAction} (${userAction.tag}) changed the permissions of the role ${newRole} (${newRole.name}).\n\n${emojis.error} **I was unable to ban him.**`,
 
     noFound: (newRole) =>
-      `Les permissions du rôle ${newRole} (${newRole.name}) ont changées **mais je ne sais pas qui les ont changées.**`,
+      `The permissions of the role ${newRole} (${newRole.name}) have changed **but I don't know who changed them.**`,
   },
 
   webhookUpdate: {
     desc: (userAction, channel) =>
-      `${userAction} (${userAction.tag}) a créé un webhook dans le salon ${channel}.\n\n${emojis.success} **J'ai réussi à le dérank.**`,
+      `${userAction} (${userAction.tag})created a webhook in this channel ${channel}.\n\n${emojis.success} **I managed to unrank it.**`,
     desc2: (userAction, channel) =>
-      `${userAction} (${userAction.tag}) a créé un webhook dans le salon ${channel}.\n\n${emojis.error} **Je n'ai pas réussi à le dérank.**`,
+      `${userAction} (${userAction.tag}) created a webhook in this channel ${channel}.\n\n${emojis.error} **I was unable to unrank him.**`,
     desc3: (userAction, channel) =>
-      `${userAction} (${userAction.tag}) a créé un webhook dans le salon ${channel}.\n\n${emojis.success} **J'ai réussi à le kick.**`,
+      `${userAction} (${userAction.tag}) created a webhook in this channel ${channel}.\n\n${emojis.success} **I managed to kick it.**`,
     desc4: (userAction, channel) =>
-      `${userAction} (${userAction.tag}) a créé un webhook dans le salon ${channel}.\n\n${emojis.error} **Je n'ai pas réussi à le kick.**`,
+      `${userAction} (${userAction.tag}) created a webhook in this channel ${channel}.\n\n${emojis.error} **I was unable to kick him.**`,
     desc5: (userAction, channel) =>
-      `${userAction} (${userAction.tag}) a créé un webhook dans le salon ${channel}.\n\n${emojis.success} **J'ai réussi à le ban.**`,
+      `${userAction} (${userAction.tag})created a webhook in this channel ${channel}.\n\n${emojis.success} **I managed to ban him.**`,
     desc6: (userAction, channel) =>
-      `${userAction} (${userAction.tag}) a créé un webhook dans le salon ${channel}.\n\n${emojis.error} **Je n'ai pas réussi à le ban.**`,
+      `${userAction} (${userAction.tag}) created a webhook in this channel ${channel}.\n\n${emojis.error} **I was unable to ban him.**`,
 
     noFound: (channel) =>
-      `Un webhook a été créé dans le salon ${channel} **mais je ne sais pas qui l'a créé.**\n\n**Pour plus de sécurité, j'ai quand même supprimé le webhook !**`,
+      `A webhook has been created in the channel ${channel} **but I don't know who created it.**\n\n**For more security, I still removed the webhook!**`,
   },
 };
