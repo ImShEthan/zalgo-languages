@@ -1,25 +1,25 @@
 const { emojis } = require("../../../../config");
 module.exports = {
   userNotFound: () =>
-    `${emojis.error} | Cette personne n'est pas présente sur ce serveur !`,
+    `${emojis.error} | This user is not present on this server!`,
   userIsYou: () =>
-    `${emojis.error} | Vous ne pouvez pas vous sanctionner vous-même !`,
+    `${emojis.error} | You can't punish yourself!`,
   youCantKick: () =>
-    `${emojis.error} | Vous ne pouvez pas kick cette personne !`,
+    `${emojis.error} | You can't kick this user!`,
   userInWl: () =>
-    `${emojis.error} | Cette personne est dans la whitelist et ne peut pas être kick !`,
+    `${emojis.error} | This user is in the whitelist and can't be kicked!`,
 
-  noReason: () => `pas de raison donnée`,
+  noReason: () => `no reason given`,
 
-  success: (member) => member.user.tag + " a été kick !",
-  desc: () => `**Raison:**`,
-  mod: () => `Modérateur:`,
+  success: (member) => member.user.tag + " has been kicked !",
+  desc: () => `**Reason:**`,
+  mod: () => `Moderator:`,
 
-  util: () => `Utilisateur :`,
-  reason: () => `Raison`,
+  util: () => `User :`,
+  reason: () => `Reason`,
 
-  num: () => `Nombres de sanctions:`,
+  num: () => `Number of sanctions:`,
 
   error: () =>
-    `${emojis.error} | Une erreur est survenue ! Veuillez vérifier que je sois au dessus de la personne !`,
+    `${emojis.error} | An error has occurred! Please check that I am above the user!`,
 };
