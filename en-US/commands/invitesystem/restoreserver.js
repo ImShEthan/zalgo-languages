@@ -1,5 +1,5 @@
 const { emojis } = require("../../../../config");
 module.exports = {
-  loading: () => `${emojis.loading} | Restauration des invitations en cours...`,
-  success: () => `${emojis.success} | Invitations restaurés effectué !`,
+  loading: () => `${emojis.loading} | Restore current invitations...`,
+  success: () => `${emojis.success} | Restored invitations completed!`,
 };
