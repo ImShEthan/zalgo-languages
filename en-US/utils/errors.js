@@ -3,14 +3,14 @@ module.exports = {
   missingPerms: (neededPermissions) =>
     `__**${
       emojis.error
-    } Permissions manquantes**__\n\nJ'ai besoin des permissions suivantes pour le bon fonctionnement de cette commande: ${neededPermissions
+    } Missing permissions**__\n\nI need the following permission: ${neededPermissions
       .map((p) => "`" + p + "`")
       .join(", ")}`,
   disabled: () =>
-    `${emojis.error} | Cette commande est actuellement désactivée !`,
+    `${emojis.error} | This command is currently disable !`,
   permLevel: (name) =>
-    `${emojis.error} | Cette commande nécessite le niveau d'autorisation : \`${name}\`!`,
+    `${emojis.error} | This command require this permission level : \`${name}\`!`,
   sendPerm: () =>
-    `${emojis.error} | Je n'ai pas la permission d'envoyer des messages dans ce salon !`,
-  noFoundChannel: () => `Ce salon est introuvable !`,
+    `${emojis.error} | I can't send message is this channel !`,
+  noFoundChannel: () => `I can't send this channel !`,
 };

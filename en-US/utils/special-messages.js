@@ -1,22 +1,22 @@
 const { emojis } = require("../../../config");
 module.exports = {
   join: {
-    oauth2: (user) => `${user} a rejoint le serveur via OAuth.`,
+    oauth2: (user) => `${user} as join the server using OAuth.`,
     vanity: (user) =>
-      `${user} a rejoint le serveur avec **l'invitation personnalisée** :\n`,
+      `${user} join the server with **the custom url** :\n`,
     unknown: (user) =>
-      `**Je n'arrive pas à trouver** comment ${user} a rejoint le serveur :\n`,
+      `**I can't find** how ${user} join the server :\n`,
     perm: (user) =>
-      `${emojis.error} | J'ai besoin d'avoir les permissions de gérer le serveur pour savoir qui a invité ${user}.`,
+      `${emojis.error} | I need the permission manage server for seing who invite ${user}.`,
   },
   leave: {
     oauth2: (user) =>
-      `${user} a quitté le serveur, il avait rejoint via OAuth.`,
+      `${user} have leave the server, he joined using OAuth.`,
     vanity: (user) =>
-      `${user} a quitté le serveur, il avait rejoint avec l'invitation personnalisée !`,
+      `${user} have leave the server,  he joined using custom url !`,
     unknown: (user) =>
-      `${user} a quitté le serveur, mais je n'arrive pas à trouver comment il l'avait rejoint.`,
+      `${user} have leave the server, I can't find how he joined.`,
     perm: (user) =>
-      `${emojis.error} | J'ai besoin d'avoir les permissions de gérer le serveur pour savoir qui a invité ${user}.`,
+      `${emojis.error} | I need the permission manage server for seing who invite ${user}.`,
   },
 };
