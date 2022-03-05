@@ -1,4 +1,4 @@
 const { emojis } = require("../../../../config");
 module.exports = {
-  error: () => `${emojis.error} | Ce serveur ne possède pas de bannière !`,
+  error: () => `${emojis.error} | This server does not have a banner!`,
 };
