@@ -4,9 +4,9 @@ module.exports = {
   name: () => `${emojis.newGeneral} Nom :`,
   id: () => `${emojis.newID} ID :`,
   createdAt: () => `${emojis.poum} Créé le :`,
-  owner: () => `${emojis.newOwner} Owner du serveur :`,
-  ownerNotFound: () => `Owner introuvable !`,
-  boost: () => `${emojis.newBoost} Nombre de boost :`,
+  owner: () => `${emojis.newOwner} Propriétaire du serveur :`,
+  ownerNotFound: () => `Propriétaire introuvable !`,
+  boost: () => `${emojis.newBoost} Nombre de boost(s) :`,
   boostDesc: (message) =>
     `\`Boosts: ${
       message.guild.premiumSubscriptionCount
@@ -33,7 +33,7 @@ module.exports = {
     }`,
   members: () => `${emojis.newUsers} Membres :`,
   membersDesc: (message) =>
-    `**Total:** \`${message.guild.memberCount}\`\n**Users:** \`${
+    `**Total:** \`${message.guild.memberCount}\`\n**Utilisateurs:** \`${
       message.guild.memberCount -
       message.guild.members.cache.filter((m) => m.user.bot).size
     }\`\n**Bots:** \`${
