@@ -12,4 +12,3 @@ module.exports = {
   field: (prefix, role, inviteCount) =>
     `Role removed from the rewards. Members will no longer receive it when they reach the **${inviteCount}** levels.`,
 };
-// d

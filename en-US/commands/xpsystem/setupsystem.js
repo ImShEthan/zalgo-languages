@@ -43,4 +43,3 @@ module.exports = {
   multiplicator: () => "Please send the multiplier! (ex: 2)",
   invalidInt: () => `${emojis.error} | Send a valid number !`,
 };
-// d
