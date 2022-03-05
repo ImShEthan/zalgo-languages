@@ -25,7 +25,7 @@ module.exports = {
         channel.name
       }) ${
         catégorie
-          ? `in the category **${catégorie.name}**.`
+          ? `is in the category **${catégorie.name}**.`
           : "is not in any category."
       }.\n\n${emojis.success} **I managed to unrank it.**`,
     desc2: (userAction, channel, catégorie) =>
@@ -33,7 +33,7 @@ module.exports = {
         channel.name
       }) ${
         catégorie
-          ? `in the category **${catégorie.name}**.`
+          ? `is in the category **${catégorie.name}**.`
           : "is not in any category."
       }.\n\n${emojis.error} **I was unable to unrank him.**`,
     desc3: (userAction, channel, catégorie) =>
@@ -41,7 +41,7 @@ module.exports = {
         channel.name
       }) ${
         catégorie
-          ? `in the category **${catégorie.name}**.`
+          ? `is in the category **${catégorie.name}**.`
           : "is not in any category."
       }.\n\n${emojis.success} **I managed to kick it.**`,
     desc4: (userAction, channel, catégorie) =>
@@ -49,7 +49,7 @@ module.exports = {
         channel.name
       }) ${
         catégorie
-          ? `in the category **${catégorie.name}**.`
+          ? `is in the category **${catégorie.name}**.`
           : "is not in any category."
       }.\n\n${emojis.error} **I was unable to kick him.**`,
     desc5: (userAction, channel, catégorie) =>
@@ -57,7 +57,7 @@ module.exports = {
         channel.name
       }) ${
         catégorie
-          ? `in the category **${catégorie.name}**.`
+          ? `is in the category **${catégorie.name}**.`
           : "is not in any category."
       }.\n\n${emojis.success} **I managed to ban him.**`,
     desc6: (userAction, channel, catégorie) =>
@@ -65,14 +65,14 @@ module.exports = {
         channel.name
       }) ${
         catégorie
-          ? `in the category **${catégorie.name}**.`
+          ? `is in the category **${catégorie.name}**.`
           : "is not in any category."
       }.\n\n${emojis.error} **I was unable to ban him**`,
 
     noFound: (channel, catégorie) =>
       `Le salon ${channel} a été créé, ${
         catégorie
-          ? `in the category ${catégorie.name}.`
+          ? `is in the category ${catégorie.name}.`
           : "is not in any category."
       } **but I don't know who created it. For safety's sake, I deleted the lounge anyway!**`,
   },
@@ -83,7 +83,7 @@ module.exports = {
         channel.name
       }) ${
         catégorie
-          ? `in the category **${catégorie.name}**.`
+          ? `is in the category **${catégorie.name}**.`
           : "is not in any category."
       }.\n\n${emojis.success} **I managed to unrank it.**`,
     desc2: (userAction, channel, catégorie) =>
@@ -91,7 +91,7 @@ module.exports = {
         channel.name
       }) ${
         catégorie
-          ? `in the category **${catégorie.name}**.`
+          ? `is in the category **${catégorie.name}**.`
           : "is not in any category."
       }.\n\n${emojis.error} **I was unable to unrank him.**`,
     desc3: (userAction, channel, catégorie) =>
@@ -99,7 +99,7 @@ module.exports = {
         channel.name
       }) ${
         catégorie
-          ? `in the category **${catégorie.name}**.`
+          ? `is in the category **${catégorie.name}**.`
           : "is not in any category."
       }.\n\n${emojis.success} **I managed to kick it.**`,
     desc4: (userAction, channel, catégorie) =>
@@ -107,7 +107,7 @@ module.exports = {
         channel.name
       }) ${
         catégorie
-          ? `in the category **${catégorie.name}**.`
+          ? `is in the category **${catégorie.name}**.`
           : "is not in any category."
       }.\n\n${emojis.error} **I was unable to kick him.**`,
     desc5: (userAction, channel, catégorie) =>
@@ -115,7 +115,7 @@ module.exports = {
         channel.name
       }) ${
         catégorie
-          ? `in the category **${catégorie.name}**.`
+          ? `is in the category **${catégorie.name}**.`
           : "is not in any category."
       }.\n\n${emojis.success} **I managed to ban him.**`,
     desc6: (userAction, channel, catégorie) =>
@@ -123,14 +123,14 @@ module.exports = {
         channel.name
       }) ${
         catégorie
-          ? `in the category **${catégorie.name}**.`
+          ? `is in the category **${catégorie.name}**.`
           : "is not in any category."
       }.\n\n${emojis.error} **I was unable to ban him.**`,
 
     noFound: (channel, catégorie) =>
       `Le salon ${channel} a été supprimé, ${
         catégorie
-          ? `in the category ${catégorie.name}.`
+          ? `is in the category ${catégorie.name}.`
           : "is not in any category."
       } **but I don't know who deleted it.**`,
   },

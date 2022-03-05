@@ -2,125 +2,125 @@ const { emojis } = require("../../../config");
 module.exports = {
   channelCreate: {
     noUserAction: (channel, catégorie) =>
-      `Le salon ${channel.name} (${channel}) a été créé, ${
+      `The channel ${channel.name} (${channel}) has been created, ${
         catégorie
-          ? `se trouvant dans la catégorie ${catégorie.name}.`
-          : "se trouvant dans aucune catégorie."
+          ? `is in the category ${catégorie.name}.`
+          : "is not in any category."
       }`,
   },
   channelDelete: {
     noUserAction: (channel, catégorie) =>
-      `Le salon ${channel.name} a été supprimé, ${
+      `The channel ${channel.name} has been deleted, ${
         catégorie
-          ? `se trouvant dans la catégorie ${catégorie.name}.`
-          : "se trouvant dans aucune catégorie."
+          ? `is in the category ${catégorie.name}.`
+          : "is not in any category."
       }`,
   },
   guildBanAdd: {
-    noUserAction: (user) => `${user.tag} (${user.id}) a été banni.`,
+    noUserAction: (user) => `${user.tag} (${user.id}) has been banned.`,
   },
   guildBanRemove: {
-    noUserAction: (user) => `${user.tag} (${user.id}) a été unban.`,
+    noUserAction: (user) => `${user.tag} (${user.id}) has been unbanned.`,
   },
   guildMemberAdd: {
     userAction: (member) =>
-      `${member} (${member.user.tag}) a rejoint le serveur !`,
-    createdAt: (date) => `Compte créé le ${date}`,
+      `${member} (${member.user.tag}) has join the server !`,
+    createdAt: (date) => `Account created the ${date}`,
   },
   guildMemberBoost: {
-    text: () => `{member} vient de booster {server} !`,
+    text: () => `{member} just boost {server} !`,
     footer: (member) =>
-      `Fait pareil et boost dès maintenant ${member.guild.name} !`,
+      `Do the same and boost now ${member.guild.name} !`,
   },
   guildMemberNicknameUpdate: {
     userAction: (member, oldNickname, newNickname) =>
       `${member} (${
         member.user.tag
-      }) a changé son pseudonyme sur le serveur de \`${
+      }) changed its nickname in the server \`${
         oldNickname ? oldNickname : member.user.username
       }\` à \`${newNickname ? newNickname : member.user.username}\` !`,
-    createdAt: (date) => `Compte créé le ${date}`,
+    createdAt: (date) => `Account created the ${date}`,
   },
   guildMemberRemove: {
     userAction: (member) =>
-      `${member} (${member.user.tag}) a quitté le serveur !`,
-    createdAt: (date) => `Compte créé le ${date}`,
+      `${member} (${member.user.tag}) has leave the server !`,
+    createdAt: (date) => `Account created the ${date}`,
   },
   guildMemberRoleAdd: {
     noUserAction: (member, role) =>
-      `${member.user} (${member.user.tag}) (**${member.user.id})** a reçu le rôle ${role}.`,
+      `${member.user} (${member.user.tag}) (**${member.user.id})** has received the role ${role}.`,
   },
   guildMemberRoleRemove: {
     noUserAction: (member, role) =>
-      `${member.user} (${member.user.tag}) (**${member.user.id})** a été enlever du rôle ${role}.`,
+      `${member.user} (${member.user.tag}) (**${member.user.id})** has been removed from the role ${role}.`,
   },
   roleCreate: {
-    noUserAction: (role) => `Le rôle ${role.name} a été créé.`,
+    noUserAction: (role) => `the role ${role.name} has been created.`,
   },
   roleDelete: {
-    noUserAction: (role) => `Le rôle ${role.name} a été supprimé.`,
+    noUserAction: (role) => `the role ${role.name} has been deleted.`,
   },
   voiceChannelDeaf: {
     desc: (member) =>
-      `${member} (${member.user.tag}) viens d'être mute casque !`,
-    createdAt: (date) => `Compte créé le ${date}`,
+      `${member} (${member.user.tag}) just got muted headphones !`,
+    createdAt: (date) => `Account created the ${date}`,
   },
   voiceChannelJoin: {
     desc: (member, channel) =>
-      `${member} (${member.user.tag}) vient de rejoindre le salon ${channel} !`,
-    createdAt: (date) => `Compte créé le ${date}`,
+      `${member} (${member.user.tag}) just join the channel ${channel} !`,
+    createdAt: (date) => `Account created the ${date}`,
   },
   voiceChannelLeave: {
     desc: (member, channel) =>
-      `${member} (${member.user.tag}) vient de quitter le salon ${channel} !`,
-    createdAt: (date) => `Compte créé le ${date}`,
+      `${member} (${member.user.tag}) just leave the channel ${channel} !`,
+    createdAt: (date) => `Account created the ${date}`,
   },
   voiceChannelMute: {
     desc: (member) =>
-      `${member} (${member.user.tag}) viens d'être mute micro !`,
-    createdAt: (date) => `Compte créé le ${date}`,
+      `${member} (${member.user.tag}) just got mic muted !`,
+    createdAt: (date) => `Account created the ${date}`,
   },
   voiceChannelSwitch: {
     desc: (member, oldChannel, newChannel) =>
-      `${member} (${member.user.tag}) viens de changer de salon de \`${oldChannel.name}\` à \`${newChannel.name}\` !`,
-    createdAt: (date) => `Compte créé le ${date}`,
+      `${member} (${member.user.tag}) just changed the salon from \`${oldChannel.name}\` to \`${newChannel.name}\` !`,
+    createdAt: (date) => `Account created the ${date}`,
   },
   voiceChannelUneaf: {
     desc: (member) =>
-      `${member} (${member.user.tag}) viens d'être mute micro !`,
-    createdAt: (date) => `Compte créé le ${date}`,
+      `${member} (${member.user.tag}) just got mic muted !`,
+    createdAt: (date) => `Account created the ${date}`,
   },
   voiceChannelUnmute: {
     desc: (member) =>
-      `${member} (${member.user.tag}) viens d'être unmute micro !`,
-    createdAt: (date) => `Compte créé le ${date}`,
+      `${member} (${member.user.tag}) just got mic unmuted !`,
+    createdAt: (date) => `Account created the ${date}`,
   },
   userDiscriminatorUpdate: {
     description: (user, oldDiscriminator, newDiscriminator) =>
-      `${user} (${user.tag}) a changé son discriminateur de \`${oldDiscriminator}\` à \`${newDiscriminator}\` !`,
-    footer: (user, date) => `User ID ${user.id} | Compte créé le ${date}`,
+      `${user} (${user.tag}) changed its discriminator from \`${oldDiscriminator}\` to \`${newDiscriminator}\` !`,
+    footer: (user, date) => `User ID ${user.id} | Account created the ${date}`,
   },
   userUsernameUpdate: {
     description: (user, oldUsername, newUsername) =>
-      `${user} (${user.tag}) a changé son nom d'utilisateur de \`${oldUsername}\` à \`${newUsername}\` !`,
-    footer: (user, date) => `User ID ${user.id} | Compte créé le ${date}`,
+      `${user} (${user.tag}) hanged its username from \`${oldUsername}\` to \`${newUsername}\` !`,
+    footer: (user, date) => `User ID ${user.id} | Account created the ${date}`,
   },
   messageContentEdited: {
     desc: (message) =>
-      `${message.author} (${message.author.tag}) a modifié son message dans le salon ${message.channel}`,
-    old: () => `Avant que le message ai été édité :`,
-    new: () => `Après que le message ai été édité :`,
-    seeMessage: () => `Voir le message.`,
-    accountCreate: (date) => `Compte créé le ${date}`,
-    messageSu: () => `**Message trop grand.**`,
-    noMessage: () => `Aucun message, surement une image ou un embed.`,
+      `${message.author} (${message.author.tag}) has edit his message in the channel ${message.channel}`,
+    old: () => `Before the message was edited :`,
+    new: () => `After the message was edited :`,
+    seeMessage: () => `See the message.`,
+    accountCreate: (date) => `Account created the ${date}`,
+    messageSu: () => `**Message too big.**`,
+    noMessage: () => `No message, probably an image or an embed.`,
   },
   messageDelete: {
-    title: () => `Message supprimé`,
+    title: () => `Message deleted`,
     desc: (message) =>
-      `${message.author} (${message.author.tag}) a supprimé son message dans le salon ${message.channel}`,
-    accountCreate: (date) => `Compte créé le ${date}`,
-    messageSu: () => `**Message trop grand.**`,
-    noMessage: () => `Aucun message, surement une image ou un embed.`,
+      `${message.author} (${message.author.tag}) deleted his message in the channel ${message.channel}`,
+    accountCreate: (date) => `Account created the ${date}`,
+    messageSu: () => `**Message too big.**`,
+    noMessage: () => `No message, probably an image or an embed.`,
   },
 };

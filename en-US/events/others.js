@@ -1,92 +1,92 @@
 const { emojis } = require("../../../config");
 module.exports = {
   blacklist: {
-    reason: () => `Blacklist du serveur.`,
-    msg: (user) => `${user.tag} est blacklist ! Je l'ai donc ban.`,
+    reason: () => `Blacklist of the server.`,
+    msg: (user) => `${user.tag} is blacklisted ! I have banned him.`,
   },
   mute: {
     msg: (member) =>
-      `${member} a rejoins le serveur alors qu'il était mute, il a été remute !`,
+      `${member} join the server being muted, he got muted !`,
   },
   antiemojis: {
-    reason: () => `Message contenant trop d'émojis.`,
-    util: () => `Utilisateur :`,
+    reason: () => `Message with too many emojis.`,
+    util: () => `User :`,
     reason1: () => `Raison`,
-    reason2: () => `**Raison:**`,
-    msg: (message) => message.author.tag + " a reçu un avertissement !",
+    reason2: () => `**Reason:**`,
+    msg: (message) => message.author.tag + " received a warn !",
   },
   antimention: {
-    reason: () => `Message contenant trop de mentions.`,
-    util: () => `Utilisateur :`,
-    reason1: () => `Raison`,
-    reason2: () => `**Raison:**`,
-    msg: (message) => message.author.tag + " a reçu un avertissement !",
+    reason: () => `Message with too many mentions.`,
+    util: () => `User :`,
+    reason1: () => `Reason`,
+    reason2: () => `**Reason:**`,
+    msg: (message) => message.author.tag + " received a warn !",
   },
   antimaj: {
-    reason: () => `Message contenant trop de majuscules.`,
-    util: () => `Utilisateur :`,
-    reason1: () => `Raison`,
-    reason2: () => `**Raison:**`,
-    msg: (message) => message.author.tag + " a reçu un avertissement !",
+    reason: () => `Message with too many uppercases.`,
+    util: () => `User :`,
+    reason1: () => `Reason`,
+    reason2: () => `**Reason:**`,
+    msg: (message) => message.author.tag + " received a warn !",
   },
   antidiscordlinks: {
-    reason: () => `Envoie d'un lien d'invitation Discord.`,
-    util: () => `Utilisateur :`,
-    reason1: () => `Raison`,
-    reason2: () => `**Raison:**`,
-    msg: (message) => message.author.tag + " a reçu un avertissement !",
+    reason: () => `Sending a Discord invitation link.`,
+    util: () => `User :`,
+    reason1: () => `Reason`,
+    reason2: () => `**Reason:**`,
+    msg: (message) => message.author.tag + " received a warn !",
   },
   antilinks: {
-    reason: () => `Envoie d'un lien.`,
-    util: () => `Utilisateur :`,
-    reason1: () => `Raison`,
-    reason2: () => `**Raison:**`,
-    msg: (message) => message.author.tag + " a reçu un avertissement !",
+    reason: () => `Send a link.`,
+    util: () => `User :`,
+    reason1: () => `Reason`,
+    reason2: () => `**Reason:**`,
+    msg: (message) => message.author.tag + " received a warn !",
   },
   ban: {
-    noReason: () => `pas de raison donnée`,
-    success1: (user) => user.tag + " a été banni !",
-    success: (user) => user.tag + " a été banni !",
-    desc: () => `**Raison:**`,
-    mod: () => `Modérateur:`,
+    noReason: () => `no reason given`,
+    success1: (user) => user.tag + " has been banned !",
+    success: (user) => user.tag + " has been banned !",
+    desc: () => `**Reason:**`,
+    mod: () => `Moderator:`,
 
-    util: () => `Utilisateur :`,
-    reason: () => `Raison`,
+    util: () => `User :`,
+    reason: () => `Reason`,
 
-    num: () => `Nombres de sanctions:`,
+    num: () => `Number of sanctions:`,
   },
   kick: {
-    noReason: () => `pas de raison donnée`,
+    noReason: () => `no reason given`,
 
-    success: (member) => member.user.tag + " a été kick !",
-    desc: () => `**Raison:**`,
-    mod: () => `Modérateur:`,
+    success: (member) => member.user.tag + " has been kicked !",
+    desc: () => `**Reason:**`,
+    mod: () => `Moderator:`,
 
-    util: () => `Utilisateur :`,
-    reason: () => `Raison`,
+    util: () => `User :`,
+    reason: () => `Reason`,
 
-    num: () => `Nombres de sanctions:`,
+    num: () => `Number of sanctions:`,
   },
 
   mute: {
-    success: (tomute) => tomute.user.tag + " a été mute !",
+    success: (tomute) => tomute.user.tag + " has been muted !",
     desc: (reason, time, message) =>
-      `**Raison:** ${reason}\n**Durée:** ${
-        time ? message.language.convertMs(time) : "Infini"
+      `**Reason:** ${reason}\n**Duration:** ${
+        time ? message.language.convertMs(time) : "Infiny"
       }`,
-    moderator: () => `Modérateur:`,
+    moderator: () => `Moderator:`,
   },
   warn: {
-    util: () => `Utilisateur :`,
-    mod: () => `Modérateur`,
-    reason: () => `Raison`,
+    util: () => `User :`,
+    mod: () => `Moderator`,
+    reason: () => `Reason`,
 
-    num: () => `Nombres de sanctions:`,
+    num: () => `Number of sanctions:`,
 
     userSend: (message, reason) =>
-      `Vous venez d'être averti sur **${message.guild.name}** par **${message.author.tag}** pour **${reason}** !`,
-    title: (member) => member.user.tag + " a reçu un avertissement !",
-    desc: () => `**Raison:**`,
-    moderator: () => `Modérateur:`,
+      `You have just been warned on **${message.guild.name}** by **${message.author.tag}** for **${reason}** !`,
+    title: (member) => member.user.tag + " received a warn !",
+    desc: () => `**Reason:**`,
+    moderator: () => `Moderator:`,
   },
 };
