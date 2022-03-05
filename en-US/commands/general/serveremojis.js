@@ -1,5 +1,5 @@
 const { emojis } = require("../../../../config");
 module.exports = {
-  noEmojis: () => `Aucun émoji sur ce serveur.`,
-  title: (message) => `Emojis de ${message.guild.name}`,
+  noEmojis: () => `No emoji on this server.`,
+  title: (message) => `Emojis of ${message.guild.name}`,
 };
