@@ -1,8 +1,8 @@
 const { emojis } = require("../../../../config");
 module.exports = {
-  noFoundMessage: () => `${emojis.error} | Aucun message trouvé !`,
+  noFoundMessage: () => `${emojis.error} | No messages found!`,
 
-  and: () => `***et plus...***`,
+  and: () => `***and more...***`,
 
-  embeds: () => `Embeds du message:`,
+  embeds: () => `Message embeds:`,
 };
