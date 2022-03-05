@@ -1,26 +1,26 @@
 const { emojis } = require("../../../../config");
 module.exports = {
   userNotFound: () =>
-    `${emojis.error} | Cette personne n'est pas présente sur ce serveur !`,
-  userIsBot: () => `${emojis.error} | Cet utilisateur est un bot !`,
+    `${emojis.error} | This user is not on this server!`,
+  userIsBot: () => `${emojis.error} | This user is a bot!`,
   userIsYou: () =>
-    `${emojis.error} | Vous ne pouvez pas vous sanctionner vous-même !`,
+    `${emojis.error} | You can't punish yourself!`,
   youCantWarn: () =>
-    `${emojis.error} | Vous ne pouvez pas warn cette personne !`,
+    `${emojis.error} | You can't warn this user!`,
   userInWl: () =>
-    `${emojis.error} | Cette personne est dans la whitelist et ne peut pas être warn !`,
+    `${emojis.error} | This user is in the whitelist and can't be warned!`,
 
-  noReason: () => `${emojis.error} | Veuillez entrer une raison !`,
+  noReason: () => `${emojis.error} | Please enter a reason!`,
 
-  util: () => `Utilisateur :`,
-  mod: () => `Modérateur`,
-  reason: () => `Raison`,
+  util: () => `User :`,
+  mod: () => `Moderator`,
+  reason: () => `Reason`,
 
-  num: () => `Nombres de sanctions:`,
+  num: () => `Number of sanctions:`,
 
   userSend: (message, reason) =>
-    `Vous venez d'être averti sur **${message.guild.name}** par **${message.author.tag}** pour **${reason}** !`,
-  title: (member) => member.user.tag + " a reçu un avertissement !",
-  desc: () => `**Raison:**`,
-  moderator: () => `Modérateur:`,
+    `You have just been warned on **${message.guild.name}** by **${message.author.tag}** for **${reason}** !`,
+  title: (member) => member.user.tag + " has received a warning!",
+  desc: () => `**Reason:**`,
+  moderator: () => `Moderator:`,
 };
