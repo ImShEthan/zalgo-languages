@@ -1,6 +1,6 @@
 const { emojis } = require("../../../../config");
 module.exports = {
-  nofind: () => `Utilisateur introuvable !`,
-  nofindBanner: (user) => `${user.tag} n'a pas de bannière !`,
-  desc: (user) => `Bannière de ${user.tag} (${user.id})`,
+  nofind: () => `User not found!`,
+  nofindBanner: (user) => `${user.tag} has no banner!`,
+  desc: (user) => `Banner of ${user.tag} (${user.id})`,
 };
