@@ -1,19 +1,19 @@
 const { emojis } = require("../../../../config");
 module.exports = {
-  mainMenu: () => "Menu de la blacklist :",
+  mainMenu: () => "Blacklist menu:",
   mainOptions: () =>
-    `**1)** Ajouter une personne à la blacklist\n**2)** Enlever une personne de la blacklist\n**3)** Supprimer la blacklist\n**4)** Liste des membres blacklist`,
+    `**1)** Add a member to the blacklist\n**2)** Remove a member from the blacklist\n**3)** Delete the blacklist\n**4)** List of blacklisted members`,
 
-  userNotFound: () => "Cet utilisateur est introuvable !",
+  userNotFound: () => "This user cannot be found!",
 
-  userToAdd: () => "Veuillez mentionner la personne à ajouter à la blacklist",
-  alreadyInBlacklist: (user) => `${user.tag} est déjà dans la blacklist !`,
-  banUser: (user) => `${user.tag} est blacklist ! Je l'ai donc ban.`,
-  userAdded: (user) => `${user.tag} a été ajouté à la blacklist !`,
+  userToAdd: () => "Please mention the member to be added to the blacklist",
+  alreadyInBlacklist: (user) => `${user.tag} is already in the blacklist!`,
+  banUser: (user) => `${user.tag} is blacklisted! So I banned it.`,
+  userAdded: (user) => `${user.tag} has been added to the blacklist!`,
 
   userToRemove: () =>
-    "Veuillez mentionner la personne à retirer de la blacklist",
-  notYetInBlacklist: () => `Cette personne n'est pas dans la blacklist !`,
-  unbanUser: (user) => `${user.tag} est déblacklist ! Je l'ai donc unban.`,
-  userRemoved: (user) => `${user.tag} a été retiré de la blacklist !`,
+    "Please mention the member to be removed from the blacklist",
+  notYetInBlacklist: () => `This member is not in the blacklist!`,
+  unbanUser: (user) => `${user.tag} is unblacklisted! So I have unban.`,
+  userRemoved: (user) => `${user.tag} has been removed from the blacklist!`,
 };
