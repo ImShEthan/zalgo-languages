@@ -7,6 +7,6 @@ module.exports = {
     `Added roles: ${rolesAdded.length}\nDeleted roles: ${rolesRemoved.length}`,
   successAdded: () => `Role successfully added!`,
   successRemoved: () => `Role successfully removed!`,
-  successAdded1: () => `Role successfully added`,
-  successRemoved1: () => `Role successfully removed!!`,
+  successAdded1: () => `Roles successfully added`,
+  successRemoved1: () => `Roles successfully removed!!`,
 };
