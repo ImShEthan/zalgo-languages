@@ -5,4 +5,3 @@ module.exports = {
   cantCreateImage: (prefix) =>
     `${emojis.error} | I can't create the image ! Do \`${prefix}reset-card\` so I can create the image correctly.`,
 };
-//d
