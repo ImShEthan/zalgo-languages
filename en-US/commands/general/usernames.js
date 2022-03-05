@@ -1,8 +1,8 @@
 const { emojis } = require("../../../../config");
 module.exports = {
   userNotFound: () =>
-    `${emojis.error} | Cette personne n'est pas sur le serveur ou est introuvable !`,
-  noChangeNames: () => `Ce membre n'a encore jamais changé de nom.`,
+    `${emojis.error} | This person is not on the server or cannot be found!`,
+  noChangeNames: () => `This member has never changed their name before.`,
 
-  total: () => `Total des anciens noms :`,
+  total: () => `Total old names:`,
 };
