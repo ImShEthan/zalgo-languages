@@ -61,8 +61,8 @@ module.exports = {
 
   general: (prefix) => `
 \`${prefix}addbot\` ● Have the bot's invitation link.
-\`${prefix}avatar\` ● View a person's avatar.
-\`${prefix}banner\` ● View a person's banner.
+\`${prefix}avatar\` ● View a member's avatar.
+\`${prefix}banner\` ● View a member's banner.
 \`${prefix}emoji\` ● Get information about an emoji.
 \`${prefix}help\` ● See bot commands.
 \`${prefix}ping\` ● See bot latency.
