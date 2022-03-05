@@ -14,4 +14,4 @@ ${data.color ? data.color : "No color."}
     "Please send the color for your card. (Beginning with #)",
   invalidColor: () => "Your color does not contain a # !",
 };
-//
+////d

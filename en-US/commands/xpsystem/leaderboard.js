@@ -8,3 +8,4 @@ module.exports = {
     }** xp's to reach the level **${member.level + 1}**.\n`,
   leaderboard: () => "Ranking of the levels",
 };
+//d
