@@ -1,133 +1,133 @@
 const { emojis } = require("../../../../config");
 module.exports = {
   question: () =>
-    `De quelle façon voulez vous que la page d'aide soit affichée ?`,
-  commands: () => `Commandes`,
+    `How do you want the help page to be displayed?`,
+  commands: () => `Commands`,
   infos: (guild, prefix, result) =>
-    `Le préfixe actuel dans __**${guild}**__ est \`${prefix}\`.`,
-  title: () => `Menu d'aide :`,
+    `The current prefix in __**${guild}**__ is \`${prefix}\`.`,
+  title: () => `Help menu:`,
   desc: (isOwner) =>
-    `***Appuyez sur une réaction pour voir les commandes d'une catégorie.***\n\n**1)** Administration\n**2)** Games\n**3)** Général\n**4)** Invitations\n**5)** Modération\n**6)** Levels\n${
+    `***Tap a reaction to see the commands in a category.***\n\n**1)** Administration\n**2)** Games\n**3)** General\n**4)** Invitations\n**5)** Moderation\n**6)** Levels\n${
       isOwner ? "**7)** Owner" : ""
     }`,
-  page: () => `En une page`,
-  pageMultiple: () => `En plusieurs pages`,
+  page: () => `In one page`,
+  pageMultiple: () => `In several pages`,
 
-  returnToMenu: () => `↩️ Pour revenir au menu principal`,
+  returnToMenu: () => `↩️ To return to the main menu`,
 
   admin: (prefix) => `
-\`${prefix}admins\` ● Voir la liste des administrateurs du serveur.
-\`${prefix}anti-capitals\` ● Empêche l'envoie de messages avec des majuscules.
-\`${prefix}anti-emojis\` ● Empêche l'envoie de messages avec des emojis.
-\`${prefix}anti-links\` ● Empêche l'envoie des liens discord et de liens https.
-\`${prefix}anti-mass-join\` ● mpêche les membres de rejoindre trop vite le serveur.
-\`${prefix}anti-mass-mentions\` ● mpêche l'envoie de messages avec des mentions.
-\`${prefix}anti-spam\` ● Configurer l'anti spam.
-\`${prefix}autorole\` ● Ajouter un rôle à un nouveau membre à sa venue.
-\`${prefix}blacklist\` ● Blacklist des membres.
-\`${prefix}bots\` ● Voir les bots du serveur.
-\`${prefix}counters\` ● Configurer des salons pour pouvoir avoir des statistiques.
-\`${prefix}embed\` ● Créer un embed.
-\`${prefix}emojicreate\` ● Créer un émoji.
-\`${prefix}join-message\` ● Configurer le message de bienvenue.
-\`${prefix}leave-message\` ● Configurer le message de départ.
-\`${prefix}emojicreate\` ● Créer un émoji sur le serveur en donnant un lien d'image (png, jpg).
-\`${prefix}logs-master\` ● Configurer les logs sur votre serveur.
-\`${prefix}owners\` ● Donner l'accès à certains membres aux commandes réservées pour l'owner du serveur.
-\`${prefix}permissions\` ● Configurer les permissions des commandes sur des rôles.
-\`${prefix}protect-plugin\` ● Configurer l'anti-raid.
-\`${prefix}react-role\` ● Gérer les réactions-rôles (boutons).
-\`${prefix}setlang\` ● Changer la langue du bot sur ce serveur.
-\`${prefix}setprefix\` ● Changer le prefix du bot sur ce serveur.
-\`${prefix}setup-statut-role\` ● Configurer le rôle à donner si un membre a tel texte dans son statut.
-\`${prefix}setup-temp-voice\` ● Configurer les salons temporaires (vocal).
-\`${prefix}whitelist\` ● Whitelist de l'anti raid.
+\`${prefix}admins\` ● See the list of server administrators.
+\`${prefix}anti-capitals\` ● Prevent sending messages with capital letters.
+\`${prefix}anti-emojis\` ● Prevent sending messages with emojis.
+\`${prefix}anti-links\` ● Prevents sending discord links and https links.
+\`${prefix}anti-mass-join\` ● Prevents members from joining the server too quickly.
+\`${prefix}anti-mass-mentions\` ● Prevents sending messages with mentions.
+\`${prefix}anti-spam\` ● Configure anti spam.
+\`${prefix}autorole\` ● Add a role to a new member when they come.
+\`${prefix}blacklist\` ● Blacklist of members.
+\`${prefix}bots\` ● View server bots.
+\`${prefix}counters\` ● Configure rooms to be able to have statistics.
+\`${prefix}embed\` ● Create an embed.
+\`${prefix}emojicreate\` ● Create an emoji.
+\`${prefix}join-message\` ● Configure the welcome message.
+\`${prefix}leave-message\` ● Configure the start message.
+\`${prefix}emojicreate\` ● Create an emoji on the server by giving an image link (png, jpg).
+\`${prefix}logs-master\` ● Configure logs on your server.
+\`${prefix}owners\` ● Give certain members access to commands reserved for the server owner.
+\`${prefix}permissions\` ● Configure command permissions on roles.
+\`${prefix}protect-plugin\` ● Configure anti-raid.
+\`${prefix}react-role\` ● Manage role-reactions (buttons).
+\`${prefix}setlang\` ● Change the language of the bot on this server.
+\`${prefix}setprefix\` ● Change the prefix of the bot on this server.
+\`${prefix}setup-statut-role\` ● Configure the role to give if a member has such text in his status.
+\`${prefix}setup-temp-voice\` ● Configure temporary channels (voice).
+\`${prefix}whitelist\` ● Anti raid whitelist.
 `,
 
   games: (prefix) => `
-\`${prefix}awkword\` ● Créer une partie de awkword.
-\`${prefix}betrayal\` ● Créer une partie de betrayal.
-\`${prefix}checkers\` ● Créer une partie de checkers.
-\`${prefix}chess\` ● Créer une partie de chess.
-\`${prefix}doodlecrew\` ● Créer une partie de doodlecrew.
-\`${prefix}fishing\` ● Créer une partie de fishing.
-\`${prefix}lettertile\` ● Créer une partie de lettertile.
-\`${prefix}poker\` ● Créer une partie de poker.
-\`${prefix}puttparty\` ● Créer une partie de puttparty.
-\`${prefix}spellcast\` ● Créer une partie de spellcast.
-\`${prefix}wordsnack\` ● Créer une partie de wordsnack.
-\`${prefix}youtube\` ● Créer une partie de youtube.
+\`${prefix}awkword\` ● Create a game of awkword.
+\`${prefix}betrayal\` ● Create a betrayal game.
+\`${prefix}checkers\` ● Create a game of checkers.
+\`${prefix}chess\` ● Create a game of chess.
+\`${prefix}doodlecrew\` ● Create a game of doodlecrew.
+\`${prefix}fishing\` ● Create a game of fishing.
+\`${prefix}lettertile\` ● Create a game of lettertile.
+\`${prefix}poker\` ● Create a poker game.
+\`${prefix}puttparty\` ● Create a game of puttparty.
+\`${prefix}spellcast\` ● Create a game of spellcast.
+\`${prefix}wordsnack\` ● Create a game of wordsnack.
+\`${prefix}youtube\` ● Create a game of youtube.
 `,
 
   general: (prefix) => `
-\`${prefix}addbot\` ● Avoir le lien d'invitation du bot.
-\`${prefix}avatar\` ● Voir l'avatar d'une personne.
-\`${prefix}banner\` ● Voir la bannière d'une personne.
-\`${prefix}emoji\` ● Avoir les informations à propos d'un émoji.
-\`${prefix}help\` ● Voir les commandes du bot.
-\`${prefix}ping\` ● Voir la latence du bot.
-\`${prefix}server-avatar\` ● Voir l'avatar du serveur.
-\`${prefix}server-banner\` ● Voir la bannière du serveur.
-\`${prefix}server-emojis\` ● Voir les émojis du serveur.
-\`${prefix}server-info\` ● Voir les informations du serveur.
-\`${prefix}server-names\` ● Voir les anciens noms du serveur.
-\`${prefix}snipe\` ● Voir le dernier message supprimé d'un salon.
-\`${prefix}someone\` ● Donne des informations sur un membre au hasard.
-\`${prefix}user-avatars\` ● Voir les anciens avatars d'un membre.
-\`${prefix}user-info\` ● Voir les informations d'un membre.
-\`${prefix}user-names\` ● Voir les anciens noms d'un membre.
-\`${prefix}zalgo-badges\` ● Voir les badges du bot.
+\`${prefix}addbot\` ● Have the bot's invitation link.
+\`${prefix}avatar\` ● View a person's avatar.
+\`${prefix}banner\` ● View a person's banner.
+\`${prefix}emoji\` ● Get information about an emoji.
+\`${prefix}help\` ● See bot commands.
+\`${prefix}ping\` ● See bot latency.
+\`${prefix}server-avatar\` ● View server avatar.
+\`${prefix}server-banner\` ● View server banner.
+\`${prefix}server-emojis\` ● View server emojis.
+\`${prefix}server-info\` ● View server information.
+\`${prefix}server-names\` ● View old server names.
+\`${prefix}snipe\` ● See the last message deleted from a channel.
+\`${prefix}someone\` ● Gives information about a random member.
+\`${prefix}user-avatars\` ● View a member's past avatars.
+\`${prefix}user-info\` ● View member information.
+\`${prefix}user-names\` ● View a member's past names.
+\`${prefix}zalgo-badges\` ● View bot badges.
 `,
 
   giveaway: (prefix) => `
-\`${prefix}giveaway-end\` ● Terminer un giveaway.
-\`${prefix}giveaway-list\` ● Liste des giveaways.
-\`${prefix}giveaway-reroll\` ● Re-jouer le giveaway.
-\`${prefix}giveaway\` ● Créer un giveaway.
+\`${prefix}giveaway-end\` ● End a giveaway.
+\`${prefix}giveaway-list\` ● List of giveaways.
+\`${prefix}giveaway-reroll\` ● Reroll a giveaway.
+\`${prefix}giveaway\` ● Create a giveaway.
 `,
 
   invites: (prefix) => `
-\`${prefix}addbonus\` ● Ajouter un bonus d'invitations à un membre.
-\`${prefix}fetch-invites\` ● Fetch les invitations pour éviter les bugs.
-\`${prefix}invites\` ● Voir ses invitations ou celles d'un membre.
-\`${prefix}leaderboard-invites\` ● Voir le top des invitations du serveur.
-\`${prefix}removebonus\` ● Enlever un bonus d'invitations à un membre.
-\`${prefix}reset-server-invites\` ● Supprimer les invitations de tous les membres du serveur.
-\`${prefix}restore-server-invites\` ● Remettre les invitations de tous les membres du serveur.
-\`${prefix}sync-invites\` ● Synchroniser les invitations du serveur si vous avez effectué des invitations avant d'avoir ajouté le bot.
+\`${prefix}addbonus\` ● Add an invitations bonus to a member.
+\`${prefix}fetch-invites\` ● Fetch invitations to avoid bugs.
+\`${prefix}invites\` ● See his invitations or those of a member.
+\`${prefix}leaderboard-invites\` ● See the top server invites.
+\`${prefix}removebonus\` ● Remove an invite bonus from a member.
+\`${prefix}reset-server-invites\` ● Delete invitations from all members of the server.
+\`${prefix}restore-server-invites\` ● Deliver invitations to all server members.
+\`${prefix}sync-invites\` ● Sync server invites if you made invites before adding the bot.
 `,
   mod: (prefix) => `
-\`${prefix}auto-sanctions\` ● Configurer des sanctions automatiques au bout d'un certain nombre de warns.
-\`${prefix}ban\` ● Bannir un membre.
-\`${prefix}clear-sanctions\` ● Supprimer les bans, kicks, warns d'un membre.
-\`${prefix}clear\` ● Supprimer des messages (\`${prefix}clear 5 <user>\` pour supprimer les messages d'un membre).
-\`${prefix}kick\` ● Kick un membre.
-\`${prefix}lock\` ● Fermer un salon.
-\`${prefix}moove\` ● Déplacer les membres d'un salon vocal dans un autre.
-\`${prefix}mute-list\` ● Voir les membres mutes.
-\`${prefix}mute\` ● Mute un membre.
-\`${prefix}nuke\` ● Recréer le salon où a été effectuée la commande.
-\`${prefix}sanctions\` ● Voir les sanctions d'un membre.
-\`${prefix}unban\` ● Débannir un membre.
-\`${prefix}unlock\` ● Ouvrir un salon.
-\`${prefix}unmute\` ● Unmute un membre.
-\`${prefix}warn\` ● Avertir un membre.
+\`${prefix}auto-sanctions\` ● Configure automatic sanctions after a certain number of warnings.
+\`${prefix}ban\` ● Ban a member.
+\`${prefix}clear-sanctions\` ● Delete a member's bans, kicks, warns.
+\`${prefix}clear\` ● Delete messages (\`${prefix}clear 5 <user>\` to delete a member's messages).
+\`${prefix}kick\` ● Kick a member.
+\`${prefix}lock\` ● Close a channel.
+\`${prefix}moove\` ● Move members from one voice channel to another.
+\`${prefix}mute-list\` ● View muted members.
+\`${prefix}mute\` ● Mute a member.
+\`${prefix}nuke\` ● Recreate the channel where the command was made.
+\`${prefix}sanctions\` ● See a member's sanctions.
+\`${prefix}unban\` ● Unban a member.
+\`${prefix}unlock\` ● Open a channel.
+\`${prefix}unmute\` ● Unmute a member.
+\`${prefix}warn\` ● Warn a member.
 `,
   xp: (prefix) => `
-\`${prefix}addrank-level\` ● Ajouter un rôle à donner si un membre a tel level.
-\`${prefix}leaderboard-level\` ● Voir le top des levels du serveur.
-\`${prefix}rank\` ● Voir son level ou celui d'un membre.
-\`${prefix}ranks-level\` ● Voir tous les rôles à donner si un membre a tel level.
-\`${prefix}removerank-level\` ●  Supprimer un rôle à donner si un membre a tel level.
-\`${prefix}reset-card\` ●  Supprimer la configuration de sa carte.
-\`${prefix}reset-server\` ● Supprimer les levels de tous les membres du serveur.
-\`${prefix}restore-server\` ● Remettre les levels de tous les membres du serveur.
-\`${prefix}setup-card\` ● Configurer sa carte de rank.
-\`${prefix}setup-system\` ● Configurer le message, le salon pour dire qu'un membre a atteint un nouveau level.
+\`${prefix}addrank-level\` ● Add a role to give if a member at such level.
+\`${prefix}leaderboard-level\` ● See the top of server levels.
+\`${prefix}rank\` ● See his level or that of a member.
+\`${prefix}ranks-level\` ● See all the roles to give if a member has such level.
+\`${prefix}removerank-level\` ●  Delete a role to give if a member has such level.
+\`${prefix}reset-card\` ●  Delete the configuration of his card.
+\`${prefix}reset-server\` ● Remove levels from all server members.
+\`${prefix}restore-server\` ● Reset the levels of all server members.
+\`${prefix}setup-card\` ● Configure your rank card.
+\`${prefix}setup-system\` ● Configure the message and the channel where the level crossing message will be sent.
 `,
 
   owner: (prefix) => `
-\`${prefix}eval\` ● Effectuer du code javascript.
-\`${prefix}server-list\` ● Voir la liste des serveurs du bot.
+\`${prefix}eval\` ● Perform javascript code.
+\`${prefix}server-list\` ● See the list of bot servers.
 `,
 };
