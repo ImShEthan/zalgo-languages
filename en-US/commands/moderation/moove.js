@@ -1,11 +1,11 @@
 const { emojis } = require("../../../../config");
 module.exports = {
   joinVocal: () =>
-    `${emojis.error} | Vous devez être connecté dans un salon vocal !`,
+    `${emojis.error} | You must be connected in a voice channel!`,
   missingPerms: () =>
-    `${emojis.error} | Une erreur s'est produite. Soit je ne peux pas me connecter dans votre salon, soit je ne peux pas parler dans votre salon. Vérifiez mes permissions et réessayez.`,
+    `${emojis.error} | An error has occurred. I can either not log in to your channel or I can not talk in your channel. Check my permissions and try again.`,
   moove: () =>
-    `${emojis.success} | Déplacez vous dans le salon où vous voulez déplacer tout le monde !`,
-  success: () => `${emojis.success} | Salon moove.`,
-  cancel: () => `${emojis.error} | Annulé.`,
+    `${emojis.success} | Just move to the channel where you want to move everyone!`,
+  success: () => `${emojis.success} | Channel moove.`,
+  cancel: () => `${emojis.error} | Cancelled.`,
 };
