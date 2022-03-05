@@ -2,7 +2,7 @@ const { emojis } = require("../../../../config");
 module.exports = {
   userNotFound: () =>
     `${emojis.error} | Cette personne n'est pas présente sur ce serveur !`,
-  bot: () => `${emojis.error} | Cette utilisateur est un bot !`,
+  bot: () => `${emojis.error} | Cet utilisateur est un bot !`,
 
   dnd: () => `Ne pas déranger`,
   idle: () => `Inactif`,
@@ -26,7 +26,7 @@ module.exports = {
     prefix,
     platform
   ) => [
-    `**❯ Username:** ${user.username}`,
+    `**❯ Nom d'utilisateur:** ${user.username}`,
     `**❯ Discriminateur:** ${user.discriminator}`,
     `**❯ ID:** ${user.id}`,
     `**❯ Badges Discord:** ${
@@ -90,7 +90,7 @@ module.exports = {
         }** partis)`,
     },
     joinOrder: {
-      title: () => `Ordre d'arrivées`,
+      title: () => `Ordre d'arrivée`,
       content: (previous, next, user) =>
         `${previous ? `${previous.tag} > ` : ""}${user.tag}${
           next ? ` > ${next.tag}` : ""
