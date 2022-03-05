@@ -1,5 +1,5 @@
 const { emojis } = require("../../../../config");
 module.exports = {
-  desc: (message) => `Le salon a été recréé par ${message.author}.`,
-  button: () => `Renvoyer les messages épinglés`,
+  desc: (message) => `The channel was created by ${message.author}.`,
+  button: () => `Resend pinned messages`,
 };
