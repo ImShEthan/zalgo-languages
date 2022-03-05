@@ -24,6 +24,6 @@ ${
   roleNotFound: () => "Rôle non trouvé",
   roleRemoved: () => `Rôle retiré`,
   max5roles: () =>
-    `Vous ne pouvez mettre que maximum 5 rôles dans les rôles ayant accès aux tickets !`,
+    `Vous ne pouvez mettre que maximum 5 rôles!`,
   roleAdded: () => `Rôle ajouté`,
 };
