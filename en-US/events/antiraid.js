@@ -129,7 +129,7 @@ module.exports = {
 
     noFound: (channel, catégorie) =>
       `Le salon ${channel} a été supprimé, ${
-        catégorie
+        
           ? `is in the category ${catégorie.name}.`
           : "is not in any category."
       } **but I don't know who deleted it.**`,
